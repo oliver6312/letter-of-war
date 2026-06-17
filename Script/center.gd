@@ -1,6 +1,10 @@
 extends Area2D
 
 @export var secret = true
+
+@export var sworn_to: Array = ["Bralia", "Corvista","Korik","Lyrdea","Naskan","Nillia","Vervir"]
+@export var coat_of_arms: Texture2D 
+
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
 
@@ -13,6 +17,7 @@ func _ready() -> void:
 	
 	name_label.text = get_display_name()
 	info_label.text = get_display_info()
+
 
 func _process(delta: float) -> void:
 	pass

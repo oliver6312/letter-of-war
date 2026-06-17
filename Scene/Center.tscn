@@ -5,10 +5,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ceug5"]
 size = Vector2(42, 42)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vc3js"]
+load_path = "res://.godot/imported/Shield 1.0.0.png-a1fce160b4a2b42a2ba512755032e905.ctex"
+
 [node name="Center" type="Area2D" unique_id=413034370]
 script = ExtResource("1_tp068")
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1877010798]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240748558]
 shape = SubResource("RectangleShape2D_ceug5")
@@ -17,14 +18,11 @@ shape = SubResource("RectangleShape2D_ceug5")
 scale = Vector2(1.5, 1.5)
 polygon = PackedVector2Array(-14, 14, 14, 14, 14, -14, -14, -14)
 
-[node name="InfoLabel" type="Label" parent="." unique_id=590729642]
-unique_name_in_owner = true
-offset_left = -10.0
-offset_top = 49.0
-offset_right = -9.0
-offset_bottom = 72.0
+[node name="CoatofArms" type="Sprite2D" parent="." unique_id=303519238]
+scale = Vector2(0.7, 0.7)
+texture = SubResource("CompressedTexture2D_vc3js")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1721496933]
+[node name="NameContainer" type="HBoxContainer" parent="." unique_id=1721496933]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -34,6 +32,21 @@ offset_right = 1.0
 offset_bottom = 44.0
 grow_horizontal = 2
 
-[node name="NameLabel" type="Label" parent="HBoxContainer" unique_id=2145974281]
+[node name="NameLabel" type="Label" parent="NameContainer" unique_id=2145974281]
 unique_name_in_owner = true
 layout_mode = 2
+
+[node name="TokenInfo" type="Panel" parent="." unique_id=1146696643]
+visible = false
+offset_left = 23.0
+offset_top = -20.0
+offset_right = 63.0
+offset_bottom = 20.0
+
+[node name="InfoLabel" type="Label" parent="TokenInfo" unique_id=590729642]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -33.0
+offset_top = 69.0
+offset_right = -32.0
+offset_bottom = 92.0
