@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b82ocxqxyrjpa"]
+
+[ext_resource type="Script" uid="uid://dyvl3746mvkg4" path="res://Script/center.gd" id="1_tp068"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ceug5"]
+size = Vector2(42, 42)
+
+[node name="Center" type="Area2D" unique_id=413034370]
+script = ExtResource("1_tp068")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1877010798]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240748558]
+shape = SubResource("RectangleShape2D_ceug5")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=823985058]
+scale = Vector2(1.5, 1.5)
+polygon = PackedVector2Array(-14, 14, 14, 14, 14, -14, -14, -14)
+
+[node name="InfoLabel" type="Label" parent="." unique_id=590729642]
+unique_name_in_owner = true
+offset_left = -10.0
+offset_top = 49.0
+offset_right = -9.0
+offset_bottom = 72.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1721496933]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.0
+offset_top = 21.0
+offset_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="NameLabel" type="Label" parent="HBoxContainer" unique_id=2145974281]
+unique_name_in_owner = true
+layout_mode = 2

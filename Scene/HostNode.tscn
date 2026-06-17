@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://clxfk8s0ko6sa"]
 
 [ext_resource type="Texture2D" uid="uid://d32xxjyjg08up" path="res://Modern Feudal Indland Third Iteration New Color 3 (mini).png" id="1_wl3oy"]
-[ext_resource type="PackedScene" uid="uid://b82ocxqxyrjpa" path="res://Center.tscn" id="2_6oxiq"]
-[ext_resource type="Script" uid="uid://dt13wr6pjdsf4" path="res://camera_2d.gd" id="3_6oxiq"]
+[ext_resource type="PackedScene" uid="uid://b82ocxqxyrjpa" path="res://Scene/Center.tscn" id="2_6oxiq"]
+[ext_resource type="Script" uid="uid://dt13wr6pjdsf4" path="res://Script/camera_2d.gd" id="3_6oxiq"]
 
 [node name="HostNode" type="Node2D" unique_id=1389908294]
 
@@ -11,6 +11,8 @@ texture = ExtResource("1_wl3oy")
 
 [node name="Center" parent="." unique_id=413034370 instance=ExtResource("2_6oxiq")]
 position = Vector2(216, 115)
+secret = false
+token_name = "Port of Lyrdea"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=849376651]
 script = ExtResource("3_6oxiq")
