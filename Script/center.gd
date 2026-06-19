@@ -22,6 +22,10 @@ enum SwornTo {
 		if is_node_ready():
 			update_sworn_icon()
 
+
+@export var function_one: Array[String] = []
+@export var function_two: Array[String] = []
+@export var function_three: Array[String] = []
 @export var misc_list: Array[String] = []
 
 @export_group("Production")
@@ -64,19 +68,15 @@ func _ready() -> void:
 func _on_ashton_password_accepted():
 	print("Correct password entered!")
 	ashton_password_entered = true
-
 func _on_bellari_password_accepted():
 	print("Correct password entered!")
 	bellari_password_entered = true
-
 func _on_carvano_password_accepted():
 	print("Correct password entered!")
 	carvano_password_entered = true
-
 func _on_dravin_password_accepted():
 	print("Correct password entered!")
 	dravin_password_entered = true
-
 func _on_taurus_password_accepted():
 	print("Correct password entered!")
 	taurus_password_entered = true
@@ -135,10 +135,35 @@ func get_info_text() -> String:
 	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
 
+	text += "\n"
+
 	text += "Produces " + str(steel_production) + " steel" + "\n"
 	text += "Produces " + str(gold_production) + " gold" + "\n"
 	text += "Produces " + str(food_production) + " food" + "\n"
 
+	text += "\n"
+
+	text += "Function one: \n"
+	if function_one.is_empty():
+		text += "- None\n"
+	else:
+		for note in function_one:
+			text += "- " + note + "\n"
+	text += "\n"
+	text += "Function two: \n"
+	if function_two.is_empty():
+		text += "- None\n"
+	else:
+		for note in function_two:
+			text += "- " + note + "\n"
+	text += "\n"
+	text += "Function three: \n"
+	if function_three.is_empty():
+		text += "- None\n"
+	else:
+		for note in function_three:
+			text += "- " + note + "\n"
+	text += "\n"
 	text += "Misc Notes\n"
 	
 

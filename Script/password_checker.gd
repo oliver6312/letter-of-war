@@ -4,23 +4,12 @@ extends Node2D
 @onready var password_window: Window = $PasswordWindow
 @onready var line_edit: LineEdit = %LineEdit
 
-
 signal ashton_view_activated
-@export var ashton_password: String = "secret"
-
 signal bellari_view_activated
-@export var bellari_password: String = "secret"
-
 signal taurus_view_activated
-@export var taurus_password: String = "secret"
-
 signal dravin_view_activated
-@export var dravin_password: String = "1"
-
 signal carvano_view_activated
-@export var carvano_password: String = "secret"
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	password_window.visible = false
 	open_button.text = "PASSWORD"
@@ -31,6 +20,12 @@ func _check_password(_check_password) -> void:
 	print("password was entered")
 	password_window.visible = false
 			#ASHTON
+	if _check_password == "p":
+		ashton_view_activated.emit()
+		bellari_view_activated.emit()
+		carvano_view_activated.emit()
+		dravin_view_activated.emit()
+		taurus_view_activated.emit()
 	if _check_password == "borna":
 		print("welcome ashton")
 		ashton_view_activated.emit()

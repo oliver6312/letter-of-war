@@ -14,6 +14,13 @@ config/name="Letter of War"
 run/main_scene="uid://clxfk8s0ko6sa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=4
+window/stretch/mode="canvas_items"
+
 [input]
 
 ui_left={
