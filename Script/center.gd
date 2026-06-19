@@ -1,6 +1,7 @@
 extends Area2D
 class_name CenterToken
 
+
 enum SwornTo {
 	NONE,
 	ASHTON,
@@ -42,9 +43,43 @@ enum SwornTo {
 @onready var info_popup: PopupPanel = %InfoPopup
 @onready var info_text: RichTextLabel = %InfoPopupText
 
+@onready var password_checker: Node2D = $"../PasswordChecker"
+
+var ashton_password_entered: bool = false
+var bellari_password_entered: bool = false
+var carvano_password_entered: bool = false
+var dravin_password_entered: bool = false
+var taurus_password_entered: bool = false
+
 func _ready() -> void:
 	update_name_label()
 	update_sworn_icon()
+	
+	password_checker.ashton_view_activated.connect(_on_ashton_password_accepted)
+	password_checker.bellari_view_activated.connect(_on_bellari_password_accepted)
+	password_checker.carvano_view_activated.connect(_on_carvano_password_accepted)
+	password_checker.dravin_view_activated.connect(_on_dravin_password_accepted)
+	password_checker.taurus_view_activated.connect(_on_taurus_password_accepted)
+
+func _on_ashton_password_accepted():
+	print("Correct password entered!")
+	ashton_password_entered = true
+
+func _on_bellari_password_accepted():
+	print("Correct password entered!")
+	bellari_password_entered = true
+
+func _on_carvano_password_accepted():
+	print("Correct password entered!")
+	carvano_password_entered = true
+
+func _on_dravin_password_accepted():
+	print("Correct password entered!")
+	dravin_password_entered = true
+
+func _on_taurus_password_accepted():
+	print("Correct password entered!")
+	taurus_password_entered = true
 
 func update_name_label() -> void:
 	name_label.text = token_name
@@ -79,7 +114,8 @@ func get_sworn_texture() -> Texture2D:
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-			open_info_menu()
+			if get_sworn_name() == "Ashton" and ashton_password_entered:
+				open_info_menu()
 
 func open_info_menu() -> void:
 	info_text.text = get_info_text()
