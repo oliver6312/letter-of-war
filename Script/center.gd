@@ -116,6 +116,14 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if get_sworn_name() == "Ashton" and ashton_password_entered:
 				open_info_menu()
+			if get_sworn_name() == "Bellari" and bellari_password_entered:
+				open_info_menu()
+			if get_sworn_name() == "Carvano" and carvano_password_entered:
+				open_info_menu()
+			if get_sworn_name() == "Dravin" and dravin_password_entered:
+				open_info_menu()
+			if get_sworn_name() == "Taurus" and taurus_password_entered:
+				open_info_menu()
 
 func open_info_menu() -> void:
 	info_text.text = get_info_text()
@@ -124,10 +132,15 @@ func open_info_menu() -> void:
 func get_info_text() -> String:
 	var text := ""
 
-	text += "Name:" + token_name + "\n"
+	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
 
+	text += "Produces " + str(steel_production) + " steel" + "\n"
+	text += "Produces " + str(gold_production) + " gold" + "\n"
+	text += "Produces " + str(food_production) + " food" + "\n"
+
 	text += "Misc Notes\n"
+	
 
 	if misc_list.is_empty():
 		text += "- None\n"
