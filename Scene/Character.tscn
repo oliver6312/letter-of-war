@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bkd5ktlp7m07c"]
+
+[ext_resource type="Script" uid="uid://cdbgogho6o6w7" path="res://Script/character.gd" id="1_q5f08"]
+[ext_resource type="Texture2D" uid="uid://b426kyxjjvesh" path="res://Sprites/Coat of Arms/Unsworn.png" id="2_us202"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j3y5w"]
+radius = 16.0
+
+[node name="Character" type="Area2D" unique_id=1765023598]
+script = ExtResource("1_q5f08")
+has_army = null
+army_size = null
+traits = null
+mechanics = null
+token_name = null
+sworn_to = null
+misc_list = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2019274936]
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_us202")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1399056822]
+shape = SubResource("CircleShape2D_j3y5w")
+
+[node name="NameContainer" type="HBoxContainer" parent="." unique_id=1160926519]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.0
+offset_top = 21.0
+offset_right = 1.0
+offset_bottom = 44.0
+grow_horizontal = 2
+
+[node name="NameLabel" type="Label" parent="NameContainer" unique_id=2048004950]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="InfoPopup" type="PopupMenu" parent="." unique_id=1157489350]
+oversampling_override = 1.0
+
+[node name="MarginContainer" type="MarginContainer" parent="InfoPopup" unique_id=1105015463]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InfoText" type="Label" parent="InfoPopup/MarginContainer" unique_id=2141927224]
+layout_mode = 2

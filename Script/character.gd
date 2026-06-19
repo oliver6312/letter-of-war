@@ -1,0 +1,2 @@
+extends BaseToken
+class_name CharacterToken

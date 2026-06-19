@@ -1,19 +1,128 @@
 [gd_scene format=3 uid="uid://clxfk8s0ko6sa"]
 
-[ext_resource type="Texture2D" uid="uid://d32xxjyjg08up" path="res://Sprites/Modern Feudal Indland Third Iteration New Color 3 (mini).png" id="1_wl3oy"]
+[ext_resource type="Texture2D" uid="uid://dgpmo16oavcxr" path="res://Sprites/Modern Feudal Indland Third Iteration New Color 4 (mini).png" id="1_qb2yl"]
 [ext_resource type="PackedScene" uid="uid://b82ocxqxyrjpa" path="res://Scene/Center.tscn" id="2_6oxiq"]
 [ext_resource type="Script" uid="uid://dt13wr6pjdsf4" path="res://Script/camera_2d.gd" id="3_6oxiq"]
 
 [node name="HostNode" type="Node2D" unique_id=1389908294]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=149112539]
-texture = ExtResource("1_wl3oy")
-
-[node name="Center" parent="." unique_id=413034370 instance=ExtResource("2_6oxiq")]
-position = Vector2(161, 90)
-secret = false
-token_name = "Port of Lyrdea"
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=849376651]
 zoom = Vector2(0.5, 0.5)
 script = ExtResource("3_6oxiq")
+
+[node name="Map" type="Sprite2D" parent="." unique_id=149112539]
+texture = ExtResource("1_qb2yl")
+
+[node name="Sandora" parent="." unique_id=413034370 instance=ExtResource("2_6oxiq")]
+position = Vector2(786, 184)
+token_name = "Sandora"
+sworn_to = 2
+steel_production = 15
+gold_production = 15
+
+[node name="Torluna" parent="." unique_id=2061692451 instance=ExtResource("2_6oxiq")]
+position = Vector2(617, 179)
+token_name = "Torluna"
+sworn_to = 2
+
+[node name="Fimello" parent="." unique_id=1316420759 instance=ExtResource("2_6oxiq")]
+position = Vector2(616, 372)
+token_name = "Fimello"
+sworn_to = 2
+
+[node name="Silverhaven" parent="." unique_id=526265324 instance=ExtResource("2_6oxiq")]
+position = Vector2(-88, -18)
+token_name = "Silverhaven"
+sworn_to = 1
+steel_production = 5
+gold_production = 20
+food_production = 10
+
+[node name="Bordkeep" parent="." unique_id=1192907737 instance=ExtResource("2_6oxiq")]
+position = Vector2(-37, 293)
+token_name = "Bord Keep"
+sworn_to = 1
+steel_production = 5
+gold_production = 10
+food_production = 15
+
+[node name="Montmont" parent="." unique_id=1568984527 instance=ExtResource("2_6oxiq")]
+position = Vector2(-273, 163)
+token_name = "Montmont"
+sworn_to = 1
+steel_production = 25
+gold_production = 5
+
+[node name="Crownport" parent="." unique_id=1048723609 instance=ExtResource("2_6oxiq")]
+position = Vector2(177, 101)
+token_name = "Crownport"
+sworn_to = 5
+
+[node name="Roseshire" parent="." unique_id=1241272313 instance=ExtResource("2_6oxiq")]
+position = Vector2(220, 324)
+token_name = "Roseshire"
+sworn_to = 5
+
+[node name="Westwood" parent="." unique_id=1686435619 instance=ExtResource("2_6oxiq")]
+position = Vector2(81, 477)
+token_name = "Westwood"
+sworn_to = 5
+
+[node name="Estermont" parent="." unique_id=355190369 instance=ExtResource("2_6oxiq")]
+position = Vector2(413, 285)
+token_name = "Estermont"
+sworn_to = 5
+
+[node name="Steelcoast" parent="." unique_id=912766855 instance=ExtResource("2_6oxiq")]
+position = Vector2(234, -501)
+token_name = "Steelcoast"
+sworn_to = 4
+
+[node name="Deepcliff" parent="." unique_id=950153398 instance=ExtResource("2_6oxiq")]
+position = Vector2(433, -55)
+token_name = "Deepcliff"
+sworn_to = 4
+
+[node name="Swordbay" parent="." unique_id=99802282 instance=ExtResource("2_6oxiq")]
+position = Vector2(201, -189)
+token_name = "Swordbay"
+sworn_to = 4
+
+[node name="Port Braio" parent="." unique_id=480251947 instance=ExtResource("2_6oxiq")]
+position = Vector2(-648, 322)
+token_name = "Port Braio"
+sworn_to = 3
+gold_production = 30
+food_production = 25
+
+[node name="Bellamar" parent="." unique_id=1013125263 instance=ExtResource("2_6oxiq")]
+position = Vector2(-440, 230)
+token_name = "Bellamar"
+sworn_to = 3
+steel_production = 10
+gold_production = 5
+food_production = 5
+
+[node name="Luciro" parent="." unique_id=1474061544 instance=ExtResource("2_6oxiq")]
+position = Vector2(-547, 443)
+token_name = "Luciro"
+sworn_to = 3
+steel_production = 5
+gold_production = 5
+food_production = 20
+
+[node name="Veltan" parent="." unique_id=1630532926 instance=ExtResource("2_6oxiq")]
+position = Vector2(519, -152)
+token_name = "Veltan"
+
+[node name="Morik" parent="." unique_id=1237860487 instance=ExtResource("2_6oxiq")]
+position = Vector2(641, -259)
+token_name = "Morik"
+
+[node name="Drakarkeep" parent="." unique_id=1610849969 instance=ExtResource("2_6oxiq")]
+position = Vector2(81, -300)
+token_name = "Drakar Keep"
+
+[node name="Volsk" parent="." unique_id=299753133 instance=ExtResource("2_6oxiq")]
+position = Vector2(-144, -508)
+token_name = "Volsk"

@@ -1,15 +1,25 @@
 [gd_scene format=3 uid="uid://b82ocxqxyrjpa"]
 
 [ext_resource type="Script" uid="uid://dyvl3746mvkg4" path="res://Script/center.gd" id="1_tp068"]
+[ext_resource type="Texture2D" uid="uid://cd6c06ha4vyia" path="res://Sprites/Coat of Arms/Bellari.png" id="2_vosuv"]
+[ext_resource type="Texture2D" uid="uid://bj4mflyvdbl0p" path="res://Sprites/Coat of Arms/Taurus.png" id="3_wtm7o"]
+[ext_resource type="Texture2D" uid="uid://ciml2u13yewl8" path="res://Sprites/Coat of Arms/Carvano.png" id="4_of183"]
+[ext_resource type="Texture2D" uid="uid://cttr1n10jymfv" path="res://Sprites/Coat of Arms/Ashton.png" id="4_tdd0d"]
+[ext_resource type="Texture2D" uid="uid://c3whppnn4yv2w" path="res://Sprites/Coat of Arms/Dravin.png" id="7_2ooot"]
+[ext_resource type="Texture2D" uid="uid://b426kyxjjvesh" path="res://Sprites/Coat of Arms/Unsworn.png" id="7_vosuv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ceug5"]
 size = Vector2(42, 42)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vc3js"]
-load_path = "res://.godot/imported/Shield 1.0.0.png-a1fce160b4a2b42a2ba512755032e905.ctex"
-
 [node name="Center" type="Area2D" unique_id=413034370]
 script = ExtResource("1_tp068")
+misc_list = Array[String]([""])
+ashton_texture = ExtResource("4_tdd0d")
+bellari_texture = ExtResource("2_vosuv")
+carvano_texture = ExtResource("4_of183")
+dravin_texture = ExtResource("7_2ooot")
+taurus_texture = ExtResource("3_wtm7o")
+unsworn_texture = ExtResource("7_vosuv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240748558]
 shape = SubResource("RectangleShape2D_ceug5")
@@ -18,9 +28,10 @@ shape = SubResource("RectangleShape2D_ceug5")
 scale = Vector2(1.5, 1.5)
 polygon = PackedVector2Array(-14, 14, 14, 14, 14, -14, -14, -14)
 
-[node name="CoatofArms" type="Sprite2D" parent="." unique_id=303519238]
+[node name="SwornIcon" type="Sprite2D" parent="." unique_id=303519238]
+unique_name_in_owner = true
 scale = Vector2(0.7, 0.7)
-texture = SubResource("CompressedTexture2D_vc3js")
+texture = ExtResource("7_vosuv")
 
 [node name="NameContainer" type="HBoxContainer" parent="." unique_id=1721496933]
 anchors_preset = 5
@@ -36,17 +47,15 @@ grow_horizontal = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="TokenInfo" type="Panel" parent="." unique_id=1146696643]
-visible = false
-offset_left = 23.0
-offset_top = -20.0
-offset_right = 63.0
-offset_bottom = 20.0
-
-[node name="InfoLabel" type="Label" parent="TokenInfo" unique_id=590729642]
+[node name="InfoPopup" type="PopupPanel" parent="." unique_id=492253012]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = -33.0
-offset_top = 69.0
-offset_right = -32.0
-offset_bottom = 92.0
+oversampling_override = 1.0
+position = Vector2i(30, -7)
+size = Vector2i(300, 600)
+
+[node name="InfoPopupText" type="RichTextLabel" parent="InfoPopup" unique_id=1740110726]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 596.0
