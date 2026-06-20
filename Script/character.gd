@@ -14,6 +14,7 @@ enum SwornTo {
 
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
+@export var army_size: int = 0
 @export var sworn_to: SwornTo = SwornTo.NONE:
 	set(value):
 		sworn_to = value
@@ -170,9 +171,19 @@ func get_info_text() -> String:
 
 	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
+	
+	if army_size == 0:
+		text += "\n"
+	else:
+			text += "Army Size: " + str(army_size) + "\n"
+			text += "\n"
 
-	text += "\n"
 	text += "Reputation \n"
+	if reputation.is_empty():
+		text += "- None\n"
+	else:
+		for note in reputation:
+			text += "- " + note + "\n"
 	text += "\n"
 
 	text += "Traits\n"
@@ -184,27 +195,14 @@ func get_info_text() -> String:
 
 	text += "\n"
 
-	text += "Mechanic one: \n"
+	text += "Mechanics: \n"
 	if mechanic_one.is_empty():
 		text += "- None\n"
 	else:
 		for note in mechanic_one:
 			text += "- " + note + "\n"
 	text += "\n"
-	text += "Mechanic two: \n"
-	if mechanic_two.is_empty():
-		text += "- None\n"
-	else:
-		for note in mechanic_two:
-			text += "- " + note + "\n"
-	text += "\n"
-	text += "Mechanic three: \n"
-	if mechanic_three.is_empty():
-		text += "- None\n"
-	else:
-		for note in mechanic_three:
-			text += "- " + note + "\n"
-	text += "\n"
+
 	text += "Misc Notes\n"
 
 	if misc_list.is_empty():

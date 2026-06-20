@@ -43,7 +43,7 @@ func _check_password(_check_password) -> void:
 		print("welcome dravin")
 		dravin_view_activated.emit()
 			#TAURUS
-	if _check_password == "felix":
+	if _check_password == "guh":
 		print("welcome taurus")
 		taurus_view_activated.emit()
 	return

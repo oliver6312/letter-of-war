@@ -14,6 +14,7 @@ enum SwornTo {
 
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
+@export var defense_bonus: float = 0
 @export var natural: bool = false
 @export var sworn_to: SwornTo = SwornTo.NONE:
 	set(value):
@@ -165,6 +166,7 @@ func get_info_text() -> String:
 
 	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
+	text += "Defense Bonus: " + str(defense_bonus) + "\n"
 
 	text += "\n"
 
@@ -174,15 +176,12 @@ func get_info_text() -> String:
 
 	text += "\n"
 	text += "Reputation \n"
-
-	text += "\n"
-	text += "Reputation \n"
-
-	if function_three.is_empty():
+	if reputation.is_empty():
 		text += "- None\n"
 	else:
-		for note in function_three:
+		for note in reputation:
 			text += "- " + note + "\n"
+
 	text += "\n"
 
 	text += "Function one: \n"
@@ -222,6 +221,7 @@ func get_reputation_text() -> String:
 
 	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
+	text += "Defense Bonus: " + str(defense_bonus) + "\n"
 
 	text += "\n"
 	text += "Reputation \n"

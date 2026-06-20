@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://b82ocxqxyrjpa" path="res://Scene/Center.tscn" id="2_6oxiq"]
 [ext_resource type="Script" uid="uid://dt13wr6pjdsf4" path="res://Script/camera_2d.gd" id="3_6oxiq"]
 [ext_resource type="PackedScene" uid="uid://b53qptuyhx2lu" path="res://Scene/PasswordChecker.tscn" id="4_286v8"]
+[ext_resource type="PackedScene" uid="uid://bkd5ktlp7m07c" path="res://Scene/Character.tscn" id="5_uu6iq"]
+[ext_resource type="PackedScene" path="res://Scene/ArmyCrest.tscn" id="6_286v8"]
+[ext_resource type="PackedScene" uid="uid://8xurnwur4xom" path="res://Scene/FleetCrest.tscn" id="7_8c8lo"]
 
 [node name="HostNode" type="Node2D" unique_id=1389908294]
 
@@ -20,98 +23,162 @@ texture = ExtResource("1_qb2yl")
 [node name="Sandora" parent="." unique_id=413034370 instance=ExtResource("2_6oxiq")]
 position = Vector2(786, 184)
 token_name = "Sandora"
+defense_bonus = 1.5
 sworn_to = 2
+steel_production = 350
+reputation = Array[String](["Sandora is the largest town in the mountain range situated at the bottom of a waterfall. It is surrounded by small mines, and its streets are filled with the sound of metal work. It’s most famous for its grand quarries. "])
+function_one = Array[String](["Quarries and mason's guild. Any constructions performed in this region, or adjacent regions, may have its cost reduced by 25% but take 1 week longer to complete.  "])
 
 [node name="Torluna" parent="." unique_id=2061692451 instance=ExtResource("2_6oxiq")]
 position = Vector2(617, 179)
 token_name = "Torluna"
+defense_bonus = 3.0
 sworn_to = 2
+steel_production = 50
+gold_production = 300
+food_production = 200
+reputation = Array[String](["Torluna is the most populated city in Bralia. The many fisher men, traders and nearby lands are what feed the vast majority of the Bralia region.  "])
+function_one = Array[String](["Harbor"])
 
 [node name="Fimello" parent="." unique_id=1316420759 instance=ExtResource("2_6oxiq")]
 position = Vector2(616, 372)
 token_name = "Fimello"
+defense_bonus = 2.0
 sworn_to = 2
+steel_production = 350
+gold_production = 250
+food_production = 50
+reputation = Array[String](["Fimello is the most famous city west of Crownport, it gets regular supplies of valuable metals from the grey peaks and is home to the world famous Torvano Palace. The palace is built next to the merging rivers and open to the public; it houses the greatest library ever seen. Scholars from all across the world come seeking wisdom. "])
+function_one = Array[String](["Torvano Palace. An inspiring collection of books, maps and scholars."])
 
 [node name="Silverhaven" parent="." unique_id=526265324 instance=ExtResource("2_6oxiq")]
 position = Vector2(-88, -18)
 token_name = "Silverhaven"
+defense_bonus = 4.5
 sworn_to = 1
-steel_production = 5
-gold_production = 20
-food_production = 10
+steel_production = 50
+gold_production = 300
+food_production = 250
+reputation = Array[String](["Silverhaven is the glinting pearl of the deep lake. The second largest castle, Queensten Castle, rests on a great white cliff, overlooking the Swordcourt, where the biggest tournaments are held.  "])
+function_one = Array[String](["Queensten Castle. Gives royal legitmacy"])
+function_two = Array[String](["Swordcourt. Can be used to host truly impressive tournaments"])
 
 [node name="Bordkeep" parent="." unique_id=1192907737 instance=ExtResource("2_6oxiq")]
 position = Vector2(-37, 293)
 token_name = "Bord Keep"
+defense_bonus = 3.0
 sworn_to = 1
-steel_production = 5
-gold_production = 10
-food_production = 15
+food_production = 100
+reputation = Array[String](["The damp keep is often looked down upon, but it's strategic location makes it vital to defend Corvinshire from Lydea. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
+function_one = Array[String](["Strategic location. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
 
 [node name="Montmont" parent="." unique_id=1568984527 instance=ExtResource("2_6oxiq")]
 position = Vector2(-273, 163)
 token_name = "Montmont"
+defense_bonus = 1.0
 sworn_to = 1
-steel_production = 25
-gold_production = 5
+steel_production = 250
+gold_production = 400
+reputation = Array[String](["Montmont is situated well, close to a productive gold mine, which funds the rest of Corvinshire"])
 
 [node name="Crownport" parent="." unique_id=1048723609 instance=ExtResource("2_6oxiq")]
 position = Vector2(177, 101)
 token_name = "Crownport"
+defense_bonus = 6.0
 sworn_to = 5
+steel_production = 150
+gold_production = 350
+food_production = 300
+reputation = Array[String](["Home to the greatest castle in the lands and powerful trade guilds. The guilds control trade to such a degree that they manage to get a 5% cut from all gold produced in the land, and hand it over to their ruler. All this productivity is protected by the Lucerious Castle and the great red wall surronding the city. "])
+function_one = Array[String](["Guild halls. Get 5% of the gold gained from all the other regions of this land"])
 
 [node name="Roseshire" parent="." unique_id=1241272313 instance=ExtResource("2_6oxiq")]
 position = Vector2(220, 324)
 token_name = "Roseshire"
+defense_bonus = 1.5
 sworn_to = 5
+gold_production = 100
+food_production = 350
+reputation = Array[String](["Roseshire is known for its gentle rolling hills, well populated by good decent folk.  "])
 
-[node name="Westwood" parent="." unique_id=1686435619 instance=ExtResource("2_6oxiq")]
+[node name="Westwood Keep" parent="." unique_id=1686435619 instance=ExtResource("2_6oxiq")]
 position = Vector2(81, 477)
-token_name = "Westwood"
+token_name = "Westwood Keep"
+defense_bonus = 2.0
 sworn_to = 5
+gold_production = 50
+food_production = 100
+reputation = Array[String](["Westwood is the keep for that bridges the Kingswood and Lydea. Here lives the protectors of the forests. "])
 
 [node name="Estermont" parent="." unique_id=355190369 instance=ExtResource("2_6oxiq")]
 position = Vector2(413, 285)
 token_name = "Estermont"
+defense_bonus = 2.0
 sworn_to = 5
+steel_production = 250
+gold_production = 100
+food_production = 150
+reputation = Array[String](["A large harbor known for it's trading with Bralia."])
 
 [node name="Silvaren" parent="." unique_id=912766855 instance=ExtResource("2_6oxiq")]
 position = Vector2(234, -501)
 token_name = "Silvaren"
+defense_bonus = 1.5
 sworn_to = 4
+steel_production = 350
+gold_production = 50
+food_production = 100
+reputation = Array[String](["Silvaren is a coastal city, but much of its income arrives along the road, from villages along the Myr river and mines near the Barrens. "])
 
 [node name="Havnir" parent="." unique_id=950153398 instance=ExtResource("2_6oxiq")]
 position = Vector2(433, -55)
 token_name = "Havnir"
+defense_bonus = 3.0
 sworn_to = 4
+steel_production = 50
+gold_production = 100
+food_production = 150
+reputation = Array[String](["A cluster of stone houses, closely placed on the high cliffs of the eastern coast, this sprawling city is naturally easy to defend. The great cliffs function as a natural shelter from the wind and waves. "])
 
 [node name="Nistral" parent="." unique_id=99802282 instance=ExtResource("2_6oxiq")]
 position = Vector2(201, -189)
 token_name = "Nistral"
+defense_bonus = 2.0
 sworn_to = 4
+steel_production = 50
+gold_production = 150
+food_production = 200
+reputation = Array[String](["Nistral is the most impressive city of Nillia, which isn’t a particularly prestigious title. Like all cities in Nillia its primary source of food is fishing, but unlike the others Nistral is a fairly successful city for trade and a common stopping point for anyone wishing to travel north. "])
 
 [node name="Port Braio" parent="." unique_id=480251947 instance=ExtResource("2_6oxiq")]
 position = Vector2(-648, 322)
 token_name = "Port Braio"
+defense_bonus = 2.0
 sworn_to = 3
-gold_production = 30
-food_production = 25
+steel_production = 300
+gold_production = 350
+reputation = Array[String](["Among the greatest cities of this land is Port Braio. It has exlusive access to the ocean and from here great ships can undergo incredible voyages.  "])
+function_one = Array[String](["The great salt harbor. From here galleons can sail to the foreign Western countries.  "])
 
 [node name="Bellamar" parent="." unique_id=1013125263 instance=ExtResource("2_6oxiq")]
 position = Vector2(-440, 230)
 token_name = "Bellamar"
+defense_bonus = 1.0
 sworn_to = 3
-steel_production = 10
-gold_production = 5
-food_production = 5
+steel_production = 250
+gold_production = 200
+food_production = 250
+reputation = Array[String](["Bellamar enjoys rich steel mines, rich fertile lands, and a strong economy.  "])
 
 [node name="Luciro" parent="." unique_id=1474061544 instance=ExtResource("2_6oxiq")]
 position = Vector2(-547, 443)
 token_name = "Luciro"
+defense_bonus = 1.5
 sworn_to = 3
-steel_production = 5
-gold_production = 5
-food_production = 20
+gold_production = 150
+food_production = 400
+reputation = Array[String](["Lucrio is said to the god's favorite city for nowhere else is the wine as sweet and rich. The climate is milder than in the north; the winters are shorter, and the land is more fertile.  "])
+function_one = Array[String](["Blessed vineyards. The wine here is sweeter than anywhere. Each turn, you may choose another region to sell to. They will gain 400 gold from this.  "])
 
 [node name="Veltan" parent="." unique_id=1630532926 instance=ExtResource("2_6oxiq")]
 position = Vector2(519, -152)
@@ -168,3 +235,112 @@ natural = true
 position = Vector2(680, -411)
 token_name = "Dragon Throne"
 natural = true
+
+[node name="Delmar the Kind" parent="." unique_id=1765023598 instance=ExtResource("5_uu6iq")]
+position = Vector2(618, 411)
+token_name = "Delmar"
+army_size = 15000
+sworn_to = 2
+traits = Array[String](["Learned", "Self Righteous", "Idealistic", "Disciplined", "Beloved"])
+reputation = Array[String](["Delmar is known for his genius and discipline. He has studied laws, history and theology in depth and written many works where he argues for better treatment of the common folk. Delmar has given much of his own wealth to fund poor houses and holds free lectures in the Torvano palace. "])
+misc_list = Array[String](["Hates Soren greatly"])
+visible_to_none = false
+
+[node name="ArmyCrest" parent="Delmar the Kind" unique_id=755617748 instance=ExtResource("6_286v8")]
+
+[node name="Florian Lorwell" parent="." unique_id=683898129 instance=ExtResource("5_uu6iq")]
+position = Vector2(619, 216)
+token_name = "Florian Lorwell"
+sworn_to = 2
+traits = Array[String](["Cunning", "Wrathful", "Vigilant", "Deceptive", "Charming"])
+reputation = Array[String](["Used to work as a spy for the late king Alexander Taurus"])
+misc_list = Array[String](["Master assasin and spy, who is in hiding after having killed the late king Alexander Taurus"])
+
+[node name="Leo Bellewyn" parent="." unique_id=2021414051 instance=ExtResource("5_uu6iq")]
+position = Vector2(-38, 332)
+token_name = "Leo Bellewyn"
+army_size = 10000
+sworn_to = 1
+traits = Array[String](["Rude", "Brave", "Handsome", "Strong", "Over confident"])
+reputation = Array[String](["This young knight has won countless tournaments and was an important commander in the civil war. Handsome and strong, with an impressive mind of combat, he thinks himself invincible. "])
+mechanic_one = Array[String](["Scouts. If a larger army attempts to attack Leo in a region, he may evade them."])
+visible_to_none = false
+
+[node name="ArmyCrest" parent="Leo Bellewyn" unique_id=1889454554 instance=ExtResource("6_286v8")]
+
+[node name="Sarah the Little" parent="." unique_id=1122431964 instance=ExtResource("5_uu6iq")]
+position = Vector2(144, 99)
+token_name = "Sarah the Little"
+sworn_to = 1
+traits = Array[String](["Cunning", "Rude", "Diplomatic", "Deceptive", "Wrathful"])
+misc_list = Array[String](["The bastard daughter of the late king Alexander Taurus, born in a whore house in Silverhaven. Sarah bears a clear resemblance to her noble side. She has worked her way up into a position of power and has informants all around the coast of the Deep. Her ultimate goal is the end of House Taurus. "])
+
+[node name="Darian Bright" parent="." unique_id=357122988 instance=ExtResource("5_uu6iq")]
+position = Vector2(219, 349)
+token_name = "Darian Bright"
+army_size = 20000
+sworn_to = 5
+traits = Array[String](["Naive", "Brave", "Humble", "Strong", "Beloved"])
+reputation = Array[String](["Darian Bright is a middle-aged knight who is famous for protecting the commoners of both ally and enemies during the civil war. "])
+visible_to_none = false
+
+[node name="ArmyCrest" parent="Darian Bright" unique_id=557660049 instance=ExtResource("6_286v8")]
+
+[node name="Andreas Taurus" parent="." unique_id=1701094334 instance=ExtResource("5_uu6iq")]
+position = Vector2(179, 131)
+token_name = "Andreas Taurus"
+army_size = 30000
+sworn_to = 5
+traits = Array[String](["Loyal", "Stoic", "Zealous", "Battle Scared", "Wrathful"])
+reputation = Array[String](["A stern war commander, brother to the late king and uncle to Theodor Taurus. He seeks to reunite the kingdom under his House name. "])
+mechanic_one = Array[String](["Overwhelming numbers. When attacking with a significantly larger army, get the upper hand in combat. "])
+visible_to_none = false
+
+[node name="ArmyCrest" parent="Andreas Taurus" unique_id=1622779082 instance=ExtResource("6_286v8")]
+
+[node name="Callum Weave" parent="." unique_id=974138954 instance=ExtResource("5_uu6iq")]
+position = Vector2(225, 96)
+token_name = "Callum Weave"
+sworn_to = 5
+traits = Array[String](["Cunning", "Diplomatic", "Cautious", "Learned", "Jovial"])
+reputation = Array[String](["Callum Weave grew up as the son of a talented artisan and managed to climb his way to the top of the trader's guild. He created his own noble house, House Weave, named after his mother's craft. He commands great authority in the city of Crownport "])
+misc_list = Array[String](["House Taurus is in great depth to House Weave and the traders guild"])
+
+[node name="Torr the Rabid" parent="." unique_id=2115889601 instance=ExtResource("5_uu6iq")]
+position = Vector2(473, -51)
+token_name = "Torr the Rabid"
+army_size = 25000
+sworn_to = 4
+traits = Array[String](["Brutal", "Feared", "Loyal", "Battle Scared", "Insane"])
+reputation = Array[String](["Torr the Rabid got his epithet from his many exploits in the civil war. He brutalized the entire coast of the Narrow. It is said that half of the coming generation on the coast are his, and he hangs his flayed victims from the masts of his ship.  "])
+mechanic_one = Array[String](["Slave keeper. Can collect slaves after an attack; the slaves can be given to a city to greatly boost its productivity but keep in mind that slavery is outlawed. ", "Sea snake. Soldiers in this fleet fight with the strength of two. ", "Rallying through violence. Recruits 500 soldiers after a successful raid or battle by making a violent spectacle. "])
+misc_list = Array[String]([""])
+visible_to_none = false
+
+[node name="FleetCrest" parent="Torr the Rabid" unique_id=1942921524 instance=ExtResource("7_8c8lo")]
+
+[node name="Stefan the Shipwright" parent="." unique_id=1981726774 instance=ExtResource("5_uu6iq")]
+position = Vector2(221, -168)
+token_name = "Stefan the Shipwright"
+sworn_to = 4
+traits = Array[String](["Loyal", "Squeamish", "Jovial", "Learned", "Productive"])
+reputation = Array[String](["Stefan studied ships and nautical engineering at the great library in Torvano Palace in Fimello. Afterwards he helped build an impressive fleet for House Dravin for the civil war. "])
+mechanic_one = Array[String](["Genius shipwright. Fleets don’t cost extra to build compared to regular armies. "])
+
+[node name="Lucas Vistaro" parent="." unique_id=1741839888 instance=ExtResource("5_uu6iq")]
+position = Vector2(-546, 475)
+token_name = "Lucas Vistaro"
+army_size = 40000
+sworn_to = 3
+traits = Array[String](["Loyal", "Naive", "Dim", "Drunkard", "Jovial"])
+misc_list = Array[String](["The son of the wealthy Wincent Vistaro, who has yet to prove his worth. "])
+
+[node name="ArmyCrest" parent="." unique_id=1691600832 instance=ExtResource("6_286v8")]
+position = Vector2(-546, 475)
+
+[node name="Salvardor Ashaux" parent="." unique_id=1478124049 instance=ExtResource("5_uu6iq")]
+position = Vector2(-647, 349)
+token_name = "Salvardor Ashaux"
+sworn_to = 3
+traits = Array[String](["Old", "Battle Scared", "Brave", "Respected", "Vigilant"])
+mechanic_one = Array[String](["Sea snake. Soldiers in this fleet fight with the strength of two. "])

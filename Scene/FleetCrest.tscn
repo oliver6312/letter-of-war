@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://8xurnwur4xom"]
+
+[ext_resource type="Texture2D" uid="uid://dsb4dhbfguv46" path="res://Sprites/Fleet Crest.png" id="1_ctjss"]
+
+[node name="FleetCrest" type="Sprite2D" unique_id=1942921524]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_ctjss")

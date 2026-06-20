@@ -38,9 +38,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -1.0
-offset_top = 21.0
+offset_top = -42.0
 offset_right = 1.0
-offset_bottom = 44.0
+offset_bottom = -19.0
 grow_horizontal = 2
 
 [node name="NameLabel" type="Label" parent="NameContainer" unique_id=2145974281]
