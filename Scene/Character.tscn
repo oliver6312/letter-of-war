@@ -1,23 +1,33 @@
 [gd_scene format=3 uid="uid://bkd5ktlp7m07c"]
 
 [ext_resource type="Script" uid="uid://cdbgogho6o6w7" path="res://Script/character.gd" id="1_q5f08"]
+[ext_resource type="Texture2D" uid="uid://cttr1n10jymfv" path="res://Sprites/Coat of Arms/Ashton.png" id="2_jm7yx"]
+[ext_resource type="Texture2D" uid="uid://de5aakvxd65lg" path="res://Sprites/Character Circle.png" id="2_m6ju2"]
 [ext_resource type="Texture2D" uid="uid://b426kyxjjvesh" path="res://Sprites/Coat of Arms/Unsworn.png" id="2_us202"]
+[ext_resource type="Texture2D" uid="uid://cd6c06ha4vyia" path="res://Sprites/Coat of Arms/Bellari.png" id="3_65lo7"]
+[ext_resource type="Texture2D" uid="uid://ciml2u13yewl8" path="res://Sprites/Coat of Arms/Carvano.png" id="4_bm7o1"]
+[ext_resource type="Texture2D" uid="uid://c3whppnn4yv2w" path="res://Sprites/Coat of Arms/Dravin.png" id="5_c5ih6"]
+[ext_resource type="Texture2D" uid="uid://bj4mflyvdbl0p" path="res://Sprites/Coat of Arms/Taurus.png" id="6_ixtvg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3y5w"]
 radius = 16.0
 
 [node name="Character" type="Area2D" unique_id=1765023598]
 script = ExtResource("1_q5f08")
-has_army = null
-army_size = null
-traits = null
-mechanics = null
-token_name = null
-sworn_to = null
-misc_list = null
+ashton_texture = ExtResource("2_jm7yx")
+bellari_texture = ExtResource("3_65lo7")
+carvano_texture = ExtResource("4_bm7o1")
+dravin_texture = ExtResource("5_c5ih6")
+taurus_texture = ExtResource("6_ixtvg")
+unsworn_texture = ExtResource("2_us202")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2019274936]
-scale = Vector2(0.7, 0.7)
+[node name="CharacterCircle" type="Sprite2D" parent="." unique_id=1438268628]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_m6ju2")
+
+[node name="SwornIcon" type="Sprite2D" parent="." unique_id=2019274936]
+unique_name_in_owner = true
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_us202")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1399056822]
@@ -37,12 +47,15 @@ grow_horizontal = 2
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="InfoPopup" type="PopupMenu" parent="." unique_id=1157489350]
+[node name="InfoPopup" type="PopupPanel" parent="." unique_id=545802002]
+unique_name_in_owner = true
 oversampling_override = 1.0
+position = Vector2i(30, -7)
+size = Vector2i(300, 600)
 
-[node name="MarginContainer" type="MarginContainer" parent="InfoPopup" unique_id=1105015463]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="InfoText" type="Label" parent="InfoPopup/MarginContainer" unique_id=2141927224]
-layout_mode = 2
+[node name="InfoPopupText" type="RichTextLabel" parent="InfoPopup" unique_id=322581384]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 296.0
+offset_bottom = 596.0

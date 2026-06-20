@@ -1,7 +1,6 @@
 extends Area2D
 class_name CenterToken
 
-
 enum SwornTo {
 	NONE,
 	ASHTON,
@@ -15,24 +14,34 @@ enum SwornTo {
 
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
-
 @export var sworn_to: SwornTo = SwornTo.NONE:
 	set(value):
 		sworn_to = value
 		if is_node_ready():
 			update_sworn_icon()
 
-
-@export var function_one: Array[String] = []
-@export var function_two: Array[String] = []
-@export var function_three: Array[String] = []
-@export var misc_list: Array[String] = []
-
 @export_group("Production")
 
 @export var steel_production: int = 0
 @export var gold_production: int = 0
 @export var food_production: int = 0
+
+@export_group("Text heavy")
+
+@export var reputation: Array[String] = []
+@export var function_one: Array[String] = []
+@export var function_two: Array[String] = []
+@export var function_three: Array[String] = []
+@export var misc_list: Array[String] = []
+
+@export_group("Visible to")
+
+@export var visible_to_ashton: bool = false
+@export var visible_to_bellari: bool = false
+@export var visible_to_carvano: bool = false
+@export var visible_to_dravin: bool = false
+@export var visible_to_taurus: bool = false
+@export var visible_to_none: bool = false
 
 @export_group("Sworn Icons")
 
@@ -64,22 +73,35 @@ func _ready() -> void:
 	password_checker.carvano_view_activated.connect(_on_carvano_password_accepted)
 	password_checker.dravin_view_activated.connect(_on_dravin_password_accepted)
 	password_checker.taurus_view_activated.connect(_on_taurus_password_accepted)
+	
+	if visible_to_none == true:
+		visible = false
 
 func _on_ashton_password_accepted():
 	print("Correct password entered!")
 	ashton_password_entered = true
+	if visible_to_ashton == true:
+		visible = true
 func _on_bellari_password_accepted():
 	print("Correct password entered!")
 	bellari_password_entered = true
+	if visible_to_bellari == true:
+		visible = true
 func _on_carvano_password_accepted():
 	print("Correct password entered!")
 	carvano_password_entered = true
+	if visible_to_carvano == true:
+		visible = true
 func _on_dravin_password_accepted():
 	print("Correct password entered!")
 	dravin_password_entered = true
+	if visible_to_dravin == true:
+		visible = true
 func _on_taurus_password_accepted():
 	print("Correct password entered!")
 	taurus_password_entered = true
+	if visible_to_taurus == true:
+		visible = true
 
 func update_name_label() -> void:
 	name_label.text = token_name
@@ -124,9 +146,15 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 				open_info_menu()
 			if get_sworn_name() == "Taurus" and taurus_password_entered:
 				open_info_menu()
+		else:
+				open_reputation_menu()
 
 func open_info_menu() -> void:
 	info_text.text = get_info_text()
+	info_popup.popup_centered()
+
+func open_reputation_menu() -> void:
+	info_text.text = get_reputation_text()
 	info_popup.popup_centered()
 
 func get_info_text() -> String:
@@ -141,6 +169,17 @@ func get_info_text() -> String:
 	text += "Produces " + str(gold_production) + " gold" + "\n"
 	text += "Produces " + str(food_production) + " food" + "\n"
 
+	text += "\n"
+	text += "Reputation \n"
+
+	text += "\n"
+	text += "Reputation \n"
+
+	if function_three.is_empty():
+		text += "- None\n"
+	else:
+		for note in function_three:
+			text += "- " + note + "\n"
 	text += "\n"
 
 	text += "Function one: \n"
@@ -175,6 +214,24 @@ func get_info_text() -> String:
 
 	return text
 
+func get_reputation_text() -> String:
+	var text := ""
+
+	text += "Name: " + token_name + "\n"
+	text += "Sworn To: " + get_sworn_name() + "\n"
+
+	text += "\n"
+	text += "Reputation \n"
+	if reputation.is_empty():
+		text += "- None\n"
+	else:
+		for note in reputation:
+			text += "- " + note + "\n"
+
+	text += "\n"
+
+	return text
+
 func get_sworn_name() -> String:
 	match sworn_to:
 		SwornTo.ASHTON:
@@ -193,3 +250,6 @@ func get_sworn_name() -> String:
 
 func get_display_name() -> String:
 	return token_name if token_name != "" else name
+
+func visible_to() -> void:
+	return
