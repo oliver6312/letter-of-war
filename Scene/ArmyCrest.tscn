@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://do0fyauncfu4h"]
+
+[ext_resource type="Texture2D" uid="uid://nyw8n0m363c5" path="res://Sprites/Army Crest.png" id="1_nquw1"]
+
+[node name="ArmyCrest" type="Sprite2D" unique_id=755617748]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nquw1")

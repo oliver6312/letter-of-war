@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b82ocxqxyrjpa" path="res://Scene/Center.tscn" id="2_6oxiq"]
 [ext_resource type="Script" uid="uid://dt13wr6pjdsf4" path="res://Script/camera_2d.gd" id="3_6oxiq"]
 [ext_resource type="PackedScene" uid="uid://b53qptuyhx2lu" path="res://Scene/PasswordChecker.tscn" id="4_286v8"]
-[ext_resource type="PackedScene" uid="uid://bkd5ktlp7m07c" path="res://Scene/Character.tscn" id="5_uu6iq"]
 
 [node name="HostNode" type="Node2D" unique_id=1389908294]
 
@@ -76,19 +75,19 @@ position = Vector2(413, 285)
 token_name = "Estermont"
 sworn_to = 5
 
-[node name="Steelcoast" parent="." unique_id=912766855 instance=ExtResource("2_6oxiq")]
+[node name="Silvaren" parent="." unique_id=912766855 instance=ExtResource("2_6oxiq")]
 position = Vector2(234, -501)
-token_name = "Steelcoast"
+token_name = "Silvaren"
 sworn_to = 4
 
-[node name="Deepcliff" parent="." unique_id=950153398 instance=ExtResource("2_6oxiq")]
+[node name="Havnir" parent="." unique_id=950153398 instance=ExtResource("2_6oxiq")]
 position = Vector2(433, -55)
-token_name = "Deepcliff"
+token_name = "Havnir"
 sworn_to = 4
 
-[node name="Swordbay" parent="." unique_id=99802282 instance=ExtResource("2_6oxiq")]
+[node name="Nistral" parent="." unique_id=99802282 instance=ExtResource("2_6oxiq")]
 position = Vector2(201, -189)
-token_name = "Swordbay"
+token_name = "Nistral"
 sworn_to = 4
 
 [node name="Port Braio" parent="." unique_id=480251947 instance=ExtResource("2_6oxiq")]
@@ -130,10 +129,42 @@ token_name = "Drakar Keep"
 position = Vector2(-144, -508)
 token_name = "Volsk"
 
-[node name="Character" parent="." unique_id=1765023598 instance=ExtResource("5_uu6iq")]
-position = Vector2(-122, 71)
-token_name = "David"
-sworn_to = 2
-reputation = Array[String](["Is known for smexy"])
-misc_list = Array[String](["Tis is stone", "it is stone"])
-visible_to_none = false
+[node name="Great Woods" parent="." unique_id=608578922 instance=ExtResource("2_6oxiq")]
+position = Vector2(-517, -200)
+token_name = "Great Woods"
+natural = true
+
+[node name="Rein Ridge" parent="." unique_id=1902997687 instance=ExtResource("2_6oxiq")]
+position = Vector2(-839, -239)
+token_name = "Rein Ridge"
+natural = true
+
+[node name="Crows Nest" parent="." unique_id=198298306 instance=ExtResource("2_6oxiq")]
+position = Vector2(-229, 245)
+token_name = "Crows Nest"
+natural = true
+
+[node name="Raven Wood" parent="." unique_id=1360167120 instance=ExtResource("2_6oxiq")]
+position = Vector2(-213, 520)
+token_name = "Raven Wood"
+natural = true
+
+[node name="Kings Wood" parent="." unique_id=1486430047 instance=ExtResource("2_6oxiq")]
+position = Vector2(216, 483)
+token_name = "Kings Wood"
+natural = true
+
+[node name="Grey Peaks" parent="." unique_id=1407289369 instance=ExtResource("2_6oxiq")]
+position = Vector2(719, 499)
+token_name = "Grey Peaks"
+natural = true
+
+[node name="Dark Wood" parent="." unique_id=1875468870 instance=ExtResource("2_6oxiq")]
+position = Vector2(756, -173)
+token_name = "Dark Wood"
+natural = true
+
+[node name="Dragon Throne" parent="." unique_id=14411333 instance=ExtResource("2_6oxiq")]
+position = Vector2(680, -411)
+token_name = "Dragon Throne"
+natural = true

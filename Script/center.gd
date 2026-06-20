@@ -14,6 +14,7 @@ enum SwornTo {
 
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
+@export var natural: bool = false
 @export var sworn_to: SwornTo = SwornTo.NONE:
 	set(value):
 		sworn_to = value
@@ -76,6 +77,8 @@ func _ready() -> void:
 	
 	if visible_to_none == true:
 		visible = false
+	if natural == true:
+		sworn_icon.visible = false
 
 func _on_ashton_password_accepted():
 	print("Correct password entered!")
