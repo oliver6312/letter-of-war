@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cttr1n10jymfv" path="res://Sprites/Coat of Arms/Ashton.png" id="4_tdd0d"]
 [ext_resource type="Texture2D" uid="uid://c3whppnn4yv2w" path="res://Sprites/Coat of Arms/Dravin.png" id="7_2ooot"]
 [ext_resource type="Texture2D" uid="uid://b426kyxjjvesh" path="res://Sprites/Coat of Arms/Unsworn.png" id="7_vosuv"]
+[ext_resource type="Texture2D" uid="uid://b6pf2iheaoio" path="res://Sprites/Blank.png" id="8_vosuv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ceug5"]
 size = Vector2(42, 42)
@@ -21,10 +22,14 @@ dravin_texture = ExtResource("7_2ooot")
 taurus_texture = ExtResource("3_wtm7o")
 unsworn_texture = ExtResource("7_vosuv")
 
+[node name="Blank" type="Sprite2D" parent="." unique_id=211291742]
+texture = ExtResource("8_vosuv")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240748558]
 shape = SubResource("RectangleShape2D_ceug5")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=823985058]
+unique_name_in_owner = true
 scale = Vector2(1.5, 1.5)
 polygon = PackedVector2Array(-14, 14, 14, 14, 14, -14, -14, -14)
 

@@ -14,6 +14,7 @@ enum SwornTo {
 
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
+@export var age: int = 0
 @export var army_size: int = 0
 @export var sworn_to: SwornTo = SwornTo.NONE:
 	set(value):
@@ -29,8 +30,6 @@ enum SwornTo {
 
 @export var reputation: Array[String] = []
 @export var mechanic_one: Array[String] = []
-@export var mechanic_two: Array[String] = []
-@export var mechanic_three: Array[String] = []
 @export var misc_list: Array[String] = []
 
 @export_group("Visible to")
@@ -171,7 +170,7 @@ func get_info_text() -> String:
 
 	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
-	
+	text += "Age: " + str(age) + "\n"
 	if army_size == 0:
 		text += "\n"
 	else:

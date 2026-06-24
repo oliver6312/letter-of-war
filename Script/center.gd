@@ -15,6 +15,7 @@ enum SwornTo {
 @export var token_name: String = ""
 @onready var name_label: Label = %NameLabel
 @export var defense_bonus: float = 0
+@export var garrison: int = 0
 @export var natural: bool = false
 @export var sworn_to: SwornTo = SwornTo.NONE:
 	set(value):
@@ -32,8 +33,6 @@ enum SwornTo {
 
 @export var reputation: Array[String] = []
 @export var function_one: Array[String] = []
-@export var function_two: Array[String] = []
-@export var function_three: Array[String] = []
 @export var misc_list: Array[String] = []
 
 @export_group("Visible to")
@@ -57,6 +56,8 @@ enum SwornTo {
 @onready var sworn_icon: Sprite2D = %SwornIcon
 @onready var info_popup: PopupPanel = %InfoPopup
 @onready var info_text: RichTextLabel = %InfoPopupText
+@onready var polygon_2d: Polygon2D = %Polygon2D
+
 
 @onready var password_checker: Node2D = $"../PasswordChecker"
 
@@ -80,6 +81,7 @@ func _ready() -> void:
 		visible = false
 	if natural == true:
 		sworn_icon.visible = false
+		polygon_2d.visible = false
 
 func _on_ashton_password_accepted():
 	print("Correct password entered!")
@@ -184,27 +186,14 @@ func get_info_text() -> String:
 
 	text += "\n"
 
-	text += "Function one: \n"
+	text += "Function: \n"
 	if function_one.is_empty():
 		text += "- None\n"
 	else:
 		for note in function_one:
 			text += "- " + note + "\n"
 	text += "\n"
-	text += "Function two: \n"
-	if function_two.is_empty():
-		text += "- None\n"
-	else:
-		for note in function_two:
-			text += "- " + note + "\n"
-	text += "\n"
-	text += "Function three: \n"
-	if function_three.is_empty():
-		text += "- None\n"
-	else:
-		for note in function_three:
-			text += "- " + note + "\n"
-	text += "\n"
+
 	text += "Misc Notes\n"
 	
 

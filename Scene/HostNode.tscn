@@ -60,8 +60,7 @@ steel_production = 50
 gold_production = 300
 food_production = 250
 reputation = Array[String](["Silverhaven is the glinting pearl of the deep lake. The second largest castle, Queensten Castle, rests on a great white cliff, overlooking the Swordcourt, where the biggest tournaments are held.  "])
-function_one = Array[String](["Queensten Castle. Gives royal legitmacy"])
-function_two = Array[String](["Swordcourt. Can be used to host truly impressive tournaments"])
+function_one = Array[String](["Swordcourt. Can be used to host truly impressive tournaments"])
 
 [node name="Bordkeep" parent="." unique_id=1192907737 instance=ExtResource("2_6oxiq")]
 position = Vector2(-37, 293)
@@ -200,6 +199,7 @@ token_name = "Volsk"
 position = Vector2(-517, -200)
 token_name = "Great Woods"
 natural = true
+reputation = Array[String](["The great woods are the biggest and oldest forest in the land. Stretching from the Rein Ridges to the Deep, and from the green hills of Vervir to the fridge north. Many brave hunters and foragers enjoy the ancient groves' plentiful bounty at its edge, but few dare venture under the dark canopy. It is said that the old beasts and giants and fae still live deep within its heart. "])
 
 [node name="Rein Ridge" parent="." unique_id=1902997687 instance=ExtResource("2_6oxiq")]
 position = Vector2(-839, -239)
@@ -215,11 +215,13 @@ natural = true
 position = Vector2(-213, 520)
 token_name = "Raven Wood"
 natural = true
+reputation = Array[String](["Sharing a border with three populated regions has put a strain on the wildlife and fruits of the forest. Overhunting has made these woods eerily quiet; soon only the wind will move these leaves. "])
 
 [node name="Kings Wood" parent="." unique_id=1486430047 instance=ExtResource("2_6oxiq")]
 position = Vector2(216, 483)
 token_name = "Kings Wood"
 natural = true
+reputation = Array[String](["Beautiful and lush greens, inhabited by noble creatures such as stags and stoats, these are truly rich woods. The king of Lydea has claimed these woods for himself, and others may only enter with permission. Despite the claim, many hungry hunters and greedy poachers stalk the woods. "])
 
 [node name="Grey Peaks" parent="." unique_id=1407289369 instance=ExtResource("2_6oxiq")]
 position = Vector2(719, 499)
@@ -236,21 +238,33 @@ position = Vector2(680, -411)
 token_name = "Dragon Throne"
 natural = true
 
+[node name="The Narrow" parent="." unique_id=3713067 instance=ExtResource("2_6oxiq")]
+position = Vector2(521, 80)
+token_name = "The Narrow"
+natural = true
+
+[node name="The Deep" parent="." unique_id=148989940 instance=ExtResource("2_6oxiq")]
+position = Vector2(75, -145)
+token_name = "The Deep"
+natural = true
+
 [node name="Delmar the Kind" parent="." unique_id=1765023598 instance=ExtResource("5_uu6iq")]
 position = Vector2(618, 411)
 token_name = "Delmar"
+age = 46
 army_size = 15000
 sworn_to = 2
 traits = Array[String](["Learned", "Self Righteous", "Idealistic", "Disciplined", "Beloved"])
 reputation = Array[String](["Delmar is known for his genius and discipline. He has studied laws, history and theology in depth and written many works where he argues for better treatment of the common folk. Delmar has given much of his own wealth to fund poor houses and holds free lectures in the Torvano palace. "])
 misc_list = Array[String](["Hates Soren greatly"])
-visible_to_none = false
 
-[node name="ArmyCrest" parent="Delmar the Kind" unique_id=755617748 instance=ExtResource("6_286v8")]
+[node name="ArmyCrest2" parent="." unique_id=755617748 instance=ExtResource("6_286v8")]
+position = Vector2(618, 411)
 
 [node name="Florian Lorwell" parent="." unique_id=683898129 instance=ExtResource("5_uu6iq")]
 position = Vector2(619, 216)
 token_name = "Florian Lorwell"
+age = 43
 sworn_to = 2
 traits = Array[String](["Cunning", "Wrathful", "Vigilant", "Deceptive", "Charming"])
 reputation = Array[String](["Used to work as a spy for the late king Alexander Taurus"])
@@ -259,6 +273,7 @@ misc_list = Array[String](["Master assasin and spy, who is in hiding after havin
 [node name="Leo Bellewyn" parent="." unique_id=2021414051 instance=ExtResource("5_uu6iq")]
 position = Vector2(-38, 332)
 token_name = "Leo Bellewyn"
+age = 21
 army_size = 10000
 sworn_to = 1
 traits = Array[String](["Rude", "Brave", "Handsome", "Strong", "Over confident"])
@@ -271,6 +286,7 @@ visible_to_none = false
 [node name="Sarah the Little" parent="." unique_id=1122431964 instance=ExtResource("5_uu6iq")]
 position = Vector2(144, 99)
 token_name = "Sarah the Little"
+age = 19
 sworn_to = 1
 traits = Array[String](["Cunning", "Rude", "Diplomatic", "Deceptive", "Wrathful"])
 misc_list = Array[String](["The bastard daughter of the late king Alexander Taurus, born in a whore house in Silverhaven. Sarah bears a clear resemblance to her noble side. She has worked her way up into a position of power and has informants all around the coast of the Deep. Her ultimate goal is the end of House Taurus. "])
@@ -278,6 +294,7 @@ misc_list = Array[String](["The bastard daughter of the late king Alexander Taur
 [node name="Darian Bright" parent="." unique_id=357122988 instance=ExtResource("5_uu6iq")]
 position = Vector2(219, 349)
 token_name = "Darian Bright"
+age = 35
 army_size = 20000
 sworn_to = 5
 traits = Array[String](["Naive", "Brave", "Humble", "Strong", "Beloved"])
@@ -289,6 +306,7 @@ visible_to_none = false
 [node name="Andreas Taurus" parent="." unique_id=1701094334 instance=ExtResource("5_uu6iq")]
 position = Vector2(179, 131)
 token_name = "Andreas Taurus"
+age = 53
 army_size = 30000
 sworn_to = 5
 traits = Array[String](["Loyal", "Stoic", "Zealous", "Battle Scared", "Wrathful"])
@@ -301,6 +319,7 @@ visible_to_none = false
 [node name="Callum Weave" parent="." unique_id=974138954 instance=ExtResource("5_uu6iq")]
 position = Vector2(225, 96)
 token_name = "Callum Weave"
+age = 41
 sworn_to = 5
 traits = Array[String](["Cunning", "Diplomatic", "Cautious", "Learned", "Jovial"])
 reputation = Array[String](["Callum Weave grew up as the son of a talented artisan and managed to climb his way to the top of the trader's guild. He created his own noble house, House Weave, named after his mother's craft. He commands great authority in the city of Crownport "])
@@ -309,6 +328,7 @@ misc_list = Array[String](["House Taurus is in great depth to House Weave and th
 [node name="Torr the Rabid" parent="." unique_id=2115889601 instance=ExtResource("5_uu6iq")]
 position = Vector2(473, -51)
 token_name = "Torr the Rabid"
+age = 25
 army_size = 25000
 sworn_to = 4
 traits = Array[String](["Brutal", "Feared", "Loyal", "Battle Scared", "Insane"])
@@ -322,25 +342,28 @@ visible_to_none = false
 [node name="Stefan the Shipwright" parent="." unique_id=1981726774 instance=ExtResource("5_uu6iq")]
 position = Vector2(221, -168)
 token_name = "Stefan the Shipwright"
+age = 31
 sworn_to = 4
 traits = Array[String](["Loyal", "Squeamish", "Jovial", "Learned", "Productive"])
 reputation = Array[String](["Stefan studied ships and nautical engineering at the great library in Torvano Palace in Fimello. Afterwards he helped build an impressive fleet for House Dravin for the civil war. "])
 mechanic_one = Array[String](["Genius shipwright. Fleets don’t cost extra to build compared to regular armies. "])
 
 [node name="Lucas Vistaro" parent="." unique_id=1741839888 instance=ExtResource("5_uu6iq")]
-position = Vector2(-546, 475)
+position = Vector2(-613, 349)
 token_name = "Lucas Vistaro"
+age = 19
 army_size = 40000
 sworn_to = 3
 traits = Array[String](["Loyal", "Naive", "Dim", "Drunkard", "Jovial"])
 misc_list = Array[String](["The son of the wealthy Wincent Vistaro, who has yet to prove his worth. "])
 
-[node name="ArmyCrest" parent="." unique_id=1691600832 instance=ExtResource("6_286v8")]
-position = Vector2(-546, 475)
+[node name="ArmyCrest" parent="." unique_id=578007774 instance=ExtResource("6_286v8")]
+position = Vector2(-647, 349)
 
 [node name="Salvardor Ashaux" parent="." unique_id=1478124049 instance=ExtResource("5_uu6iq")]
 position = Vector2(-647, 349)
 token_name = "Salvardor Ashaux"
+age = 62
 sworn_to = 3
 traits = Array[String](["Old", "Battle Scared", "Brave", "Respected", "Vigilant"])
 mechanic_one = Array[String](["Sea snake. Soldiers in this fleet fight with the strength of two. "])

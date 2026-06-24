@@ -13,13 +13,14 @@ signal carvano_view_activated
 
 func _ready() -> void:
 #	password_window.visible = false
+	password_window.visible = true
 	open_button.text = "PASSWORD"
 	open_button.pressed.connect(_button_pressed)
 	line_edit.text_submitted.connect(_check_password)
 
 func _check_password(_check_password) -> void:
 	print("password was entered")
-	password_window.visible = false
+
 			#ASHTON
 	if _check_password == "p":
 		ashton_view_activated.emit()
