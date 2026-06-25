@@ -54,7 +54,7 @@ enum SwornTo {
 @onready var info_popup: PopupPanel = %InfoPopup
 @onready var info_text: RichTextLabel = %InfoPopupText
 
-@onready var password_checker: Node2D = $"../PasswordChecker"
+@onready var password_checker: Node2D = $"../../PasswordChecker"
 
 var ashton_password_entered: bool = false
 var bellari_password_entered: bool = false
