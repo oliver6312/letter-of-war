@@ -199,6 +199,7 @@ func get_info_text() -> String:
 	text += "Sworn to: " + get_sworn_name() + "\n"
 	text += "Ruled by: " + str(ruled_by) + "\n"
 	text += "Defense Bonus: " + str(defense_bonus) + "\n"
+	text += "Garrison Soldiers: " + str(garrison) + "\n"
 
 	text += "\n"
 

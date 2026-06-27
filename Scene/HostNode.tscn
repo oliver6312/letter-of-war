@@ -23,7 +23,7 @@ texture = ExtResource("1_qb2yl")
 [node name="Centers" type="Node2D" parent="." unique_id=1438827638]
 
 [node name="Sandora" parent="Centers" unique_id=413034370 instance=ExtResource("2_6oxiq")]
-position = Vector2(786, 184)
+position = Vector2(808, 203)
 token_name = "Sandora"
 defense_bonus = 1.5
 sworn_to = 2
@@ -186,6 +186,7 @@ reputation = Array[String](["Bellamar enjoys rich steel mines, rich fertile land
 position = Vector2(-547, 443)
 token_name = "Luciro"
 defense_bonus = 1.5
+garrison = 1000
 sworn_to = 3
 ruled_by = "Wincent Vistaro"
 gold_production = 150
@@ -228,6 +229,7 @@ gold_production = 50
 food_production = 150
 
 [node name="Nature" type="Node2D" parent="." unique_id=1749660160]
+visible = false
 
 [node name="Great Woods" parent="Nature" unique_id=608578922 instance=ExtResource("2_6oxiq")]
 position = Vector2(-517, -200)
@@ -239,11 +241,13 @@ reputation = Array[String](["The great woods are the biggest and oldest forest i
 position = Vector2(-839, -239)
 token_name = "Rein Ridge"
 natural = true
+reputation = Array[String](["The rein ridges are uninhabited except for a few small hunting communities living among the many ridges of the mountain chain. They lay at the border of Vervir and continue deep into the north, no one knows exactly where it ends. "])
 
 [node name="Crows Nest" parent="Nature" unique_id=198298306 instance=ExtResource("2_6oxiq")]
 position = Vector2(-357, 388)
 token_name = "Crows Nest"
 natural = true
+reputation = Array[String](["This short mountain range is mostly known for the many crows and ravens who nest here, and of course the shiny minerals that can be found under its rocky surface. This mountain is the most inhabited in these lands, with many small communities of goat herders, a small cloister and various isolated tribes. "])
 
 [node name="Raven Wood" parent="Nature" unique_id=1360167120 instance=ExtResource("2_6oxiq")]
 position = Vector2(-213, 520)
@@ -261,6 +265,7 @@ reputation = Array[String](["Beautiful and lush greens, inhabited by noble creat
 position = Vector2(719, 499)
 token_name = "Grey Peaks"
 natural = true
+reputation = Array[String](["The Grey Peaks only have one true mountain, but it is the tallest in the land, and it is said that whoever makes the journey to its peak, will be bestowed upon the wisdom of the mountain. Surrounding it are much smaller mountains, rich in iron and copper. "])
 
 [node name="Dark Wood" parent="Nature" unique_id=1875468870 instance=ExtResource("2_6oxiq")]
 position = Vector2(756, -173)
@@ -288,7 +293,7 @@ natural = true
 position = Vector2(618, 411)
 token_name = "Delmar"
 age = 46
-army_size = 15000
+army_size = 7000
 sworn_to = 2
 traits = Array[String](["Learned", "Self Righteous", "Idealistic", "Disciplined", "Beloved"])
 reputation = Array[String](["Delmar is known for his genius and discipline. He has studied laws, history and theology in depth and written many works where he argues for better treatment of the common folk. Delmar has given much of his own wealth to fund poor houses and holds free lectures in the Torvano palace. "])
@@ -310,11 +315,11 @@ misc_list = Array[String](["Does not like Leo Bellewyn"])
 position = Vector2(-66, 290)
 token_name = "Leo Bellewyn"
 age = 21
-army_size = 10000
+army_size = 5000
 sworn_to = 1
 traits = Array[String](["Rude", "Brave", "Handsome", "Strong", "Over confident"])
 reputation = Array[String](["This young knight has won countless tournaments and was an important commander in the civil war. Handsome and strong, with an impressive mind of combat, he thinks himself invincible. "])
-mechanic_one = Array[String](["Scouts. If a larger army attempts to attack Leo in a region, he may evade them."])
+mechanic_one = Array[String](["Rabbit. The army can avoid fighting larger armies if the commander chooses to. ", "Bull. The army gets a 20-60% bonus when fighting in open fields "])
 visible_to_none = false
 
 [node name="ArmyCrest" parent="Characters/Leo Bellewyn" unique_id=1889454554 instance=ExtResource("6_286v8")]
@@ -331,10 +336,11 @@ misc_list = Array[String](["The bastard daughter of the late king Alexander Taur
 position = Vector2(219, 349)
 token_name = "Darian Bright"
 age = 35
-army_size = 20000
+army_size = 10000
 sworn_to = 5
 traits = Array[String](["Naive", "Brave", "Humble", "Strong", "Beloved"])
 reputation = Array[String](["Darian Bright is a middle-aged knight who is famous for protecting the commoners of both ally and enemies during the civil war. "])
+mechanic_one = Array[String](["Wolf. The army grows 25% faster in soldier count at the same cost "])
 visible_to_none = false
 
 [node name="ArmyCrest" parent="Characters/Darian Bright" unique_id=557660049 instance=ExtResource("6_286v8")]
@@ -343,11 +349,11 @@ visible_to_none = false
 position = Vector2(179, 131)
 token_name = "Andreas Taurus"
 age = 53
-army_size = 30000
+army_size = 15000
 sworn_to = 5
 traits = Array[String](["Loyal", "Stoic", "Zealous", "Battle Scared", "Wrathful"])
 reputation = Array[String](["A stern war commander, brother to the late king and uncle to Theodor Taurus. He seeks to reunite the kingdom under his House name. "])
-mechanic_one = Array[String](["Overwhelming numbers. When attacking with a significantly larger army, get the upper hand in combat. "])
+mechanic_one = Array[String](["Lion. The army gets a 20-60% bonus when attacking smaller armies. "])
 visible_to_none = false
 
 [node name="ArmyCrest" parent="Characters/Andreas Taurus" unique_id=1622779082 instance=ExtResource("6_286v8")]
@@ -365,11 +371,11 @@ misc_list = Array[String](["House Taurus is in great depth to House Weave and th
 position = Vector2(473, -51)
 token_name = "Torr the Rabid"
 age = 25
-army_size = 25000
+army_size = 14000
 sworn_to = 4
 traits = Array[String](["Brutal", "Feared", "Loyal", "Battle Scared", "Insane"])
 reputation = Array[String](["Torr the Rabid got his epithet from his many exploits in the civil war. He brutalized the entire coast of the Narrow. It is said that half of the coming generation on the coast are his, and he hangs his flayed victims from the masts of his ship.  "])
-mechanic_one = Array[String](["Slave keeper. Can collect slaves after an attack; the slaves can be given to a city to greatly boost its productivity but keep in mind that slavery is outlawed. ", "Sea snake. Soldiers in this fleet fight with the strength of two. ", "Rallying through violence. Recruits 500 soldiers after a successful raid or battle by making a violent spectacle. "])
+mechanic_one = Array[String](["Slave keeper. Can collect slaves after an attack; the slaves can be given to a city to greatly boost its productivity but keep in mind that slavery is outlawed. ", "Rallying through violence. Recruits 500 soldiers after a successful raid or battle by making a violent spectacle. ", "Sea snake. The army gets a 20-60% bonus if it’s attacking from the sea. ", "Dragon. Any combat bonus gotten from character mechanics is doubled. "])
 misc_list = Array[String]([""])
 visible_to_none = false
 
@@ -400,9 +406,11 @@ position = Vector2(-647, 349)
 position = Vector2(-647, 349)
 token_name = "Salvardor Ashaux"
 age = 62
+army_size = 20000
 sworn_to = 3
 traits = Array[String](["Old", "Battle Scared", "Brave", "Respected", "Vigilant"])
-mechanic_one = Array[String](["Sea snake. Soldiers in this fleet fight with the strength of two. "])
+reputation = Array[String](["He is a proud self-made man. Coming from foreign lands, trying his fortune in Port Braio, he has proven his worth at sea countless times. His house is still small, only ruling a few fishing villages near Port Braio. He has come a long way from the young lowborn sailor he once was. "])
+mechanic_one = Array[String](["Sea snake. The army gets a 20-60% bonus if it’s attacking from the sea. "])
 
 [node name="Wincent Vistaro" parent="Characters" unique_id=579855700 instance=ExtResource("5_uu6iq")]
 position = Vector2(-543, 476)
@@ -418,6 +426,7 @@ token_name = "Marcelo Marcrest"
 age = 31
 sworn_to = 3
 traits = Array[String](["Deceptive", "Learned", "Romantic", "Diplomatic", "Depressive"])
+reputation = Array[String](["Ruling never seemed to interest him much, but he has done well overseeing the rich lands of his house. However, Marcelo Marcrest is most well-known for his many short stories, poems and paintings, which have been analyzed and discussed by many scholars.  "])
 
 [node name="Edric Aubchest" parent="Characters" unique_id=98375527 instance=ExtResource("5_uu6iq")]
 position = Vector2(-52, 321)
@@ -425,6 +434,8 @@ token_name = "Edric Aubchest"
 age = 41
 sworn_to = 1
 traits = Array[String](["Learned", "Vigilant", "Honest", "Stoic", "Pragmatic"])
+reputation = Array[String](["A quiet man, he is serious and organized. He keeps track of the comings and goings of the river he rules and has a dedicated guild to register the wildlife and plants of Ravenwood.  "])
+mechanic_one = Array[String](["Viper. The army gets a 20-60% bonus when defending  "])
 
 [node name="Lev Corvain" parent="Characters" unique_id=1280287712 instance=ExtResource("5_uu6iq")]
 position = Vector2(-266, 184)
@@ -432,6 +443,7 @@ token_name = "Lev Corvain"
 age = 26
 sworn_to = 1
 traits = Array[String](["Idealistic", "Emotional", "Lazy", "Beloved", "Peaceful"])
+reputation = Array[String](["He never expected to find himself in a position of power, but after losing his father and older brothers in the civil war, Lev had to oversee the city of Montmont and its gold mines. He gives generously to the people and is quick to forgive, which has given him much love from the common folk he rules. "])
 
 [node name="Fredrick Lorwell" parent="Characters" unique_id=1797381320 instance=ExtResource("5_uu6iq")]
 position = Vector2(74, 500)
@@ -439,6 +451,7 @@ token_name = "Fredrick Lorwell"
 age = 45
 sworn_to = 5
 traits = Array[String](["Wrathful", "Deceptive", "Proud", "Entitled", "Aromantic"])
+reputation = Array[String](["A man who takes his duty seriously and who expects everyone else to do so as well. He considers his House to be second, only below House Taurus. This is despite his lands being poorer.  "])
 visible_to_bellari = true
 
 [node name="Alex Esse" parent="Characters" unique_id=2019615080 instance=ExtResource("5_uu6iq")]
@@ -447,6 +460,7 @@ token_name = "Alex Esse"
 age = 33
 sworn_to = 5
 traits = Array[String](["Diplomatic", "Cowardly", "Dim", "Emotional", "Productive"])
+reputation = Array[String](["This man is dutiful and hardworking but notably tried to avoid fighting in the civil war as much as possible. "])
 
 [node name="Sabrina Casamar" parent="Characters" unique_id=1953760770 instance=ExtResource("5_uu6iq")]
 position = Vector2(634, 280)
@@ -454,13 +468,15 @@ token_name = "Sabrina Casamar"
 age = 31
 sworn_to = 2
 traits = Array[String](["Cunning", "Anxious", "Kind", "Squeamish", "Diplomatic"])
+reputation = Array[String](["The devoted wife of Ramon Casamar has been known to help him with his work.  "])
 
 [node name="Ramon Casamar" parent="Characters" unique_id=2047124641 instance=ExtResource("5_uu6iq")]
-position = Vector2(797, 206)
+position = Vector2(815, 230)
 token_name = "Ramon Casamar"
 age = 42
 sworn_to = 2
 traits = Array[String](["Naive", "Kind", "Honest", "Diplomatic", "Productive"])
+reputation = Array[String](["A hardworking, honest man, who comes from a long line of masons, which makes him more than capable of ruling Sandora. "])
 
 [node name="Theodor Beldoro" parent="Characters" unique_id=1608758174 instance=ExtResource("5_uu6iq")]
 position = Vector2(645, 197)
@@ -468,6 +484,8 @@ token_name = "Theodor Beldoro"
 age = 37
 sworn_to = 2
 traits = Array[String](["Apathetic", "Battle Scared", "Drunkard", "Emotional", "Loyal"])
+reputation = Array[String](["He has served house Bellari loyally his entire life and during the civil war he defended Torluna bravely. The man who has been charming and warm is known a drunk who struggles to keep up appearances. While the warmth is still present, it is interrupted by emotional outbursts and drunk ramblings.  "])
+mechanic_one = Array[String](["Viper. The army gets a 20-60% bonus when defending  "])
 
 [node name="Bjorn Savic" parent="Characters" unique_id=182565719 instance=ExtResource("5_uu6iq")]
 position = Vector2(428, -24)
@@ -475,6 +493,7 @@ token_name = "Bjorn Savic"
 age = 34
 sworn_to = 4
 traits = Array[String](["Over confident", "Rude", "Illiterate", "Strong", "Ugly"])
+reputation = Array[String](["A strong proud man, after suffering an injury to the head during the civil war he has become unpredictable. He wishes to see revenge on the southern lords who think they are superior to Nillia. "])
 
 [node name="Malek Belgar" parent="Characters" unique_id=417216133 instance=ExtResource("5_uu6iq")]
 position = Vector2(252, -481)
@@ -482,6 +501,7 @@ token_name = "Malek Belgar"
 age = 58
 sworn_to = 4
 traits = Array[String](["Disloyal", "Pragmatic", "Lustful", "Cruel", "Apathetic"])
+reputation = Array[String](["A fat man who rules the northern most city. He rules it with an iron fist; shipments and taxes are on time, or there will be brutal punishment. The laws in place to protect common folk cannot reach this far north. "])
 
 [node name="Roderic Belgar" parent="Characters" unique_id=1712431921 instance=ExtResource("5_uu6iq")]
 position = Vector2(237, -202)
@@ -489,3 +509,4 @@ token_name = "Roderic Belgar"
 age = 37
 sworn_to = 4
 traits = Array[String](["Cold", "Diplomatic", "Overweight", "Drunkard", "Cunning"])
+reputation = Array[String](["First born son of Malek Belgar shares his father brutally pragmatic view and sinful habits. Despite being a cold person, he seems to understand others well and has a keen mind for politics.  "])
