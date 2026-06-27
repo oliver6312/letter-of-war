@@ -10,6 +10,35 @@ enum SwornTo {
 	TAURUS
 }
 
+enum House {
+	NONE,
+	ASHAUX,
+	VISTARO,
+	MARCREST,
+	BELLEWYN,
+	AUBCHEST,
+	CORVAIN,
+	WEAVE,
+	BRIGHT,
+	LORWELL,
+	ESSE,
+	CASAMAR,
+	VALGRANDE,
+	SAVIC,
+	BELGAR,
+	NASOV,
+	KARTAR,
+	NASKIN,
+	RASDIN,
+	ASHTON,
+	BELLARI,
+	CARVANO,
+	DRAVIN,
+	TAURUS
+}
+
+
+
 @export_group("Basic Token Info")
 
 @export var token_name: String = ""
@@ -22,6 +51,7 @@ enum SwornTo {
 		sworn_to = value
 		if is_node_ready():
 			update_sworn_icon()
+@export var ruled_by: String = ""
 
 @export_group("Production")
 
@@ -166,7 +196,8 @@ func get_info_text() -> String:
 	var text := ""
 
 	text += "Name: " + token_name + "\n"
-	text += "Sworn To: " + get_sworn_name() + "\n"
+	text += "Sworn to: " + get_sworn_name() + "\n"
+	text += "Ruled by: " + str(ruled_by) + "\n"
 	text += "Defense Bonus: " + str(defense_bonus) + "\n"
 
 	text += "\n"
@@ -209,6 +240,7 @@ func get_reputation_text() -> String:
 
 	text += "Name: " + token_name + "\n"
 	text += "Sworn To: " + get_sworn_name() + "\n"
+	text += "Ruled by: " + ruled_by + "\n"
 	text += "Defense Bonus: " + str(defense_bonus) + "\n"
 
 	text += "\n"

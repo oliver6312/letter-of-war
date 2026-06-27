@@ -27,6 +27,7 @@ position = Vector2(786, 184)
 token_name = "Sandora"
 defense_bonus = 1.5
 sworn_to = 2
+ruled_by = "Ramon Casamar"
 steel_production = 350
 reputation = Array[String](["Sandora is the largest town in the mountain range situated at the bottom of a waterfall. It is surrounded by small mines, and its streets are filled with the sound of metal work. It’s most famous for its grand quarries. "])
 function_one = Array[String](["Quarries and mason's guild. Any constructions performed in this region, or adjacent regions, may have its cost reduced by 25% but take 1 week longer to complete.  "])
@@ -36,6 +37,7 @@ position = Vector2(617, 179)
 token_name = "Torluna"
 defense_bonus = 3.0
 sworn_to = 2
+ruled_by = "Theodor Beldoro"
 steel_production = 50
 gold_production = 300
 food_production = 200
@@ -58,6 +60,7 @@ position = Vector2(-88, -18)
 token_name = "Silverhaven"
 defense_bonus = 4.5
 sworn_to = 1
+ruled_by = "Maxwell Ashton (Borna)"
 steel_production = 50
 gold_production = 300
 food_production = 250
@@ -69,6 +72,7 @@ position = Vector2(-37, 293)
 token_name = "Bord Keep"
 defense_bonus = 3.0
 sworn_to = 1
+ruled_by = "Edric Aubchest"
 food_production = 100
 reputation = Array[String](["The damp keep is often looked down upon, but it's strategic location makes it vital to defend Corvinshire from Lydea. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
 function_one = Array[String](["Strategic location. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
@@ -78,6 +82,7 @@ position = Vector2(-273, 163)
 token_name = "Montmont"
 defense_bonus = 1.0
 sworn_to = 1
+ruled_by = "Lev Corvain"
 steel_production = 250
 gold_production = 400
 reputation = Array[String](["Montmont is situated well, close to a productive gold mine, which funds the rest of Corvinshire"])
@@ -98,6 +103,7 @@ position = Vector2(220, 324)
 token_name = "Roseshire"
 defense_bonus = 1.5
 sworn_to = 5
+ruled_by = "Darian Bright"
 gold_production = 100
 food_production = 350
 reputation = Array[String](["Roseshire is known for its gentle rolling hills, well populated by good decent folk.  "])
@@ -107,6 +113,7 @@ position = Vector2(81, 477)
 token_name = "Westwood Keep"
 defense_bonus = 2.0
 sworn_to = 5
+ruled_by = "Fredrick Lorwell"
 gold_production = 50
 food_production = 100
 reputation = Array[String](["Westwood is the keep for that bridges the Kingswood and Lydea. Here lives the protectors of the forests. "])
@@ -116,6 +123,7 @@ position = Vector2(413, 285)
 token_name = "Estermont"
 defense_bonus = 2.0
 sworn_to = 5
+ruled_by = "Alex Esse"
 steel_production = 250
 gold_production = 100
 food_production = 150
@@ -126,6 +134,7 @@ position = Vector2(234, -501)
 token_name = "Silvaren"
 defense_bonus = 1.5
 sworn_to = 4
+ruled_by = "Malek Belgar"
 steel_production = 350
 gold_production = 50
 food_production = 100
@@ -136,6 +145,7 @@ position = Vector2(433, -55)
 token_name = "Havnir"
 defense_bonus = 3.0
 sworn_to = 4
+ruled_by = "Bjorn Savic"
 steel_production = 50
 gold_production = 100
 food_production = 150
@@ -166,6 +176,7 @@ position = Vector2(-440, 230)
 token_name = "Bellamar"
 defense_bonus = 1.0
 sworn_to = 3
+ruled_by = "Marcelo Marcrest"
 steel_production = 250
 gold_production = 200
 food_production = 250
@@ -176,6 +187,7 @@ position = Vector2(-547, 443)
 token_name = "Luciro"
 defense_bonus = 1.5
 sworn_to = 3
+ruled_by = "Wincent Vistaro"
 gold_production = 150
 food_production = 400
 reputation = Array[String](["Lucrio is said to the god's favorite city for nowhere else is the wine as sweet and rich. The climate is milder than in the north; the winters are shorter, and the land is more fertile.  "])
@@ -184,18 +196,36 @@ function_one = Array[String](["Blessed vineyards. The wine here is sweeter than 
 [node name="Veltan" parent="Centers" unique_id=1630532926 instance=ExtResource("2_6oxiq")]
 position = Vector2(519, -152)
 token_name = "Veltan"
+defense_bonus = 2.0
+ruled_by = "Kardin Nasov"
+steel_production = 100
+gold_production = 200
+food_production = 50
 
 [node name="Morik" parent="Centers" unique_id=1237860487 instance=ExtResource("2_6oxiq")]
 position = Vector2(641, -259)
 token_name = "Morik"
+defense_bonus = 1.0
+ruled_by = "Selim Kartar"
+steel_production = 300
+gold_production = 150
 
-[node name="Drakarkeep" parent="Centers" unique_id=1610849969 instance=ExtResource("2_6oxiq")]
+[node name="Drakar Keep" parent="Centers" unique_id=1610849969 instance=ExtResource("2_6oxiq")]
 position = Vector2(81, -300)
 token_name = "Drakar Keep"
+defense_bonus = 3.5
+ruled_by = "Bastien Rasdin"
+steel_production = 50
+gold_production = 50
+food_production = 100
 
 [node name="Volsk" parent="Centers" unique_id=299753133 instance=ExtResource("2_6oxiq")]
 position = Vector2(-144, -508)
 token_name = "Volsk"
+defense_bonus = 1.0
+ruled_by = "Cadir Naskin"
+gold_production = 50
+food_production = 150
 
 [node name="Nature" type="Node2D" parent="." unique_id=1749660160]
 
@@ -211,7 +241,7 @@ token_name = "Rein Ridge"
 natural = true
 
 [node name="Crows Nest" parent="Nature" unique_id=198298306 instance=ExtResource("2_6oxiq")]
-position = Vector2(-229, 245)
+position = Vector2(-357, 388)
 token_name = "Crows Nest"
 natural = true
 
@@ -268,16 +298,16 @@ misc_list = Array[String](["Hates Soren greatly"])
 position = Vector2(618, 411)
 
 [node name="Florian Lorwell" parent="Characters" unique_id=683898129 instance=ExtResource("5_uu6iq")]
-position = Vector2(619, 216)
+position = Vector2(607, 212)
 token_name = "Florian Lorwell"
 age = 43
 sworn_to = 2
 traits = Array[String](["Cunning", "Wrathful", "Vigilant", "Deceptive", "Charming"])
 reputation = Array[String](["Used to work as a spy for the late king Alexander Taurus"])
-misc_list = Array[String](["Master assasin and spy, who is in hiding after having killed the late king Alexander Taurus"])
+misc_list = Array[String](["Does not like Leo Bellewyn"])
 
 [node name="Leo Bellewyn" parent="Characters" unique_id=2021414051 instance=ExtResource("5_uu6iq")]
-position = Vector2(-38, 332)
+position = Vector2(-66, 290)
 token_name = "Leo Bellewyn"
 age = 21
 army_size = 10000
@@ -373,3 +403,89 @@ age = 62
 sworn_to = 3
 traits = Array[String](["Old", "Battle Scared", "Brave", "Respected", "Vigilant"])
 mechanic_one = Array[String](["Sea snake. Soldiers in this fleet fight with the strength of two. "])
+
+[node name="Wincent Vistaro" parent="Characters" unique_id=579855700 instance=ExtResource("5_uu6iq")]
+position = Vector2(-543, 476)
+token_name = "Wincent Vistaro"
+age = 59
+sworn_to = 3
+traits = Array[String](["Jovial", "Cunning", "Drunkard", "Entitled", "Charismatic"])
+reputation = Array[String](["A man knowing for generosity, laughing and expensive tastes. He dresses his portly body in fine clothing and oversees the production of the realm’s finest wine. Early death has claimed his 3 first sons, leaving him with only his youngest, Lucas. "])
+
+[node name="Marcelo Marcrest" parent="Characters" unique_id=1124929785 instance=ExtResource("5_uu6iq")]
+position = Vector2(-430, 252)
+token_name = "Marcelo Marcrest"
+age = 31
+sworn_to = 3
+traits = Array[String](["Deceptive", "Learned", "Romantic", "Diplomatic", "Depressive"])
+
+[node name="Edric Aubchest" parent="Characters" unique_id=98375527 instance=ExtResource("5_uu6iq")]
+position = Vector2(-52, 321)
+token_name = "Edric Aubchest"
+age = 41
+sworn_to = 1
+traits = Array[String](["Learned", "Vigilant", "Honest", "Stoic", "Pragmatic"])
+
+[node name="Lev Corvain" parent="Characters" unique_id=1280287712 instance=ExtResource("5_uu6iq")]
+position = Vector2(-266, 184)
+token_name = "Lev Corvain"
+age = 26
+sworn_to = 1
+traits = Array[String](["Idealistic", "Emotional", "Lazy", "Beloved", "Peaceful"])
+
+[node name="Fredrick Lorwell" parent="Characters" unique_id=1797381320 instance=ExtResource("5_uu6iq")]
+position = Vector2(74, 500)
+token_name = "Fredrick Lorwell"
+age = 45
+sworn_to = 5
+traits = Array[String](["Wrathful", "Deceptive", "Proud", "Entitled", "Aromantic"])
+visible_to_bellari = true
+
+[node name="Alex Esse" parent="Characters" unique_id=2019615080 instance=ExtResource("5_uu6iq")]
+position = Vector2(420, 308)
+token_name = "Alex Esse"
+age = 33
+sworn_to = 5
+traits = Array[String](["Diplomatic", "Cowardly", "Dim", "Emotional", "Productive"])
+
+[node name="Sabrina Casamar" parent="Characters" unique_id=1953760770 instance=ExtResource("5_uu6iq")]
+position = Vector2(634, 280)
+token_name = "Sabrina Casamar"
+age = 31
+sworn_to = 2
+traits = Array[String](["Cunning", "Anxious", "Kind", "Squeamish", "Diplomatic"])
+
+[node name="Ramon Casamar" parent="Characters" unique_id=2047124641 instance=ExtResource("5_uu6iq")]
+position = Vector2(797, 206)
+token_name = "Ramon Casamar"
+age = 42
+sworn_to = 2
+traits = Array[String](["Naive", "Kind", "Honest", "Diplomatic", "Productive"])
+
+[node name="Theodor Beldoro" parent="Characters" unique_id=1608758174 instance=ExtResource("5_uu6iq")]
+position = Vector2(645, 197)
+token_name = "Theodor Beldoro"
+age = 37
+sworn_to = 2
+traits = Array[String](["Apathetic", "Battle Scared", "Drunkard", "Emotional", "Loyal"])
+
+[node name="Bjorn Savic" parent="Characters" unique_id=182565719 instance=ExtResource("5_uu6iq")]
+position = Vector2(428, -24)
+token_name = "Bjorn Savic"
+age = 34
+sworn_to = 4
+traits = Array[String](["Over confident", "Rude", "Illiterate", "Strong", "Ugly"])
+
+[node name="Malek Belgar" parent="Characters" unique_id=417216133 instance=ExtResource("5_uu6iq")]
+position = Vector2(252, -481)
+token_name = "Malek Belgar"
+age = 58
+sworn_to = 4
+traits = Array[String](["Disloyal", "Pragmatic", "Lustful", "Cruel", "Apathetic"])
+
+[node name="Roderic Belgar" parent="Characters" unique_id=1712431921 instance=ExtResource("5_uu6iq")]
+position = Vector2(237, -202)
+token_name = "Roderic Belgar"
+age = 37
+sworn_to = 4
+traits = Array[String](["Cold", "Diplomatic", "Overweight", "Drunkard", "Cunning"])
