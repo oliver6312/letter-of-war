@@ -181,8 +181,8 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 				open_info_menu()
 			if get_sworn_name() == "Taurus" and taurus_password_entered:
 				open_info_menu()
-			else:
-				open_reputation_menu()
+		else:
+			open_reputation_menu()
 
 func open_info_menu() -> void:
 	info_text.text = get_info_text()
@@ -225,8 +225,6 @@ func get_info_text() -> String:
 	text += "\n"
 
 	text += "Misc Notes\n"
-	
-
 	if misc_list.is_empty():
 		text += "- None\n"
 	else:
