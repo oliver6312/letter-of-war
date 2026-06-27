@@ -399,7 +399,6 @@ mechanic_one = Array[String](["Genius shipwright. Fleets don’t cost extra to b
 position = Vector2(-626, 349)
 token_name = "Lucas Vistaro"
 age = 19
-army_size = 40000
 sworn_to = 3
 traits = Array[String](["Loyal", "Naive", "Dim", "Drunkard", "Jovial"])
 misc_list = Array[String](["The son of the wealthy Wincent Vistaro, who has yet to prove his worth. "])
