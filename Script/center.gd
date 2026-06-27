@@ -37,8 +37,6 @@ enum House {
 	TAURUS
 }
 
-
-
 @export_group("Basic Token Info")
 
 @export var token_name: String = ""

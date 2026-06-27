@@ -55,14 +55,14 @@ layout_mode = 2
 [node name="InfoPopup" type="PopupPanel" parent="." unique_id=492253012]
 unique_name_in_owner = true
 oversampling_override = 1.0
-position = Vector2i(30, -7)
-size = Vector2i(300, 600)
+size = Vector2i(600, 1200)
 
 [node name="InfoPopupText" type="RichTextLabel" parent="InfoPopup" unique_id=1740110726]
 unique_name_in_owner = true
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 296.0
-offset_bottom = 596.0
+offset_right = 596.0
+offset_bottom = 1196.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/normal_font_size = 24
