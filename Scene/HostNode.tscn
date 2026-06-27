@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dt13wr6pjdsf4" path="res://Script/camera_2d.gd" id="3_6oxiq"]
 [ext_resource type="PackedScene" uid="uid://b53qptuyhx2lu" path="res://Scene/PasswordChecker.tscn" id="4_286v8"]
 [ext_resource type="PackedScene" uid="uid://bkd5ktlp7m07c" path="res://Scene/Character.tscn" id="5_uu6iq"]
-[ext_resource type="PackedScene" path="res://Scene/ArmyCrest.tscn" id="6_286v8"]
+[ext_resource type="PackedScene" uid="uid://citnyhe2dvu68" path="res://Scene/ArmyCrest.tscn" id="6_286v8"]
 [ext_resource type="PackedScene" uid="uid://8xurnwur4xom" path="res://Scene/FleetCrest.tscn" id="7_8c8lo"]
 
 [node name="HostNode" type="Node2D" unique_id=1389908294]
@@ -53,7 +53,7 @@ steel_production = 350
 gold_production = 250
 food_production = 50
 reputation = Array[String](["Fimello is the most famous city west of Crownport, it gets regular supplies of valuable metals from the grey peaks and is home to the world famous Torvano Palace. The palace is built next to the merging rivers and open to the public; it houses the greatest library ever seen. Scholars from all across the world come seeking wisdom. "])
-function_one = Array[String](["Torvano Palace. An inspiring collection of books, maps and scholars."])
+function_one = Array[String](["Torvano Palace. An inspiring collection of books, maps and scholars.", "Minor Castle. This center has a minor castle, which can house 2500 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Silverhaven" parent="Centers" unique_id=526265324 instance=ExtResource("2_6oxiq")]
 position = Vector2(-88, -18)
@@ -65,7 +65,7 @@ steel_production = 50
 gold_production = 300
 food_production = 250
 reputation = Array[String](["Silverhaven is the glinting pearl of the deep lake. The second largest castle, Queensten Castle, rests on a great white cliff, overlooking the Swordcourt, where the biggest tournaments are held.  "])
-function_one = Array[String](["Swordcourt. Can be used to host truly impressive tournaments"])
+function_one = Array[String](["Swordcourt. Can be used to host truly impressive tournaments", "Great Castle. This center has a great castle, which can house 5000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Bordkeep" parent="Centers" unique_id=1192907737 instance=ExtResource("2_6oxiq")]
 position = Vector2(-37, 293)
@@ -75,7 +75,7 @@ sworn_to = 1
 ruled_by = "Edric Aubchest"
 food_production = 100
 reputation = Array[String](["The damp keep is often looked down upon, but it's strategic location makes it vital to defend Corvinshire from Lydea. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
-function_one = Array[String](["Strategic location. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
+function_one = Array[String](["Strategic location. Armies can directly enter or leave this castle from both Corvinshire and Lydea", "Great Keep. This center has a great keep, which can house 1000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Montmont" parent="Centers" unique_id=1568984527 instance=ExtResource("2_6oxiq")]
 position = Vector2(-273, 163)
@@ -96,7 +96,7 @@ steel_production = 150
 gold_production = 350
 food_production = 300
 reputation = Array[String](["Home to the greatest castle in the lands and powerful trade guilds. The guilds control trade to such a degree that they manage to get a 5% cut from all gold produced in the land, and hand it over to their ruler. All this productivity is protected by the Lucerious Castle and the great red wall surronding the city. "])
-function_one = Array[String](["Guild halls. Get 5% of the gold gained from all the other regions of this land"])
+function_one = Array[String](["Guild halls. Get 5% of the gold gained from all the other regions of this land", "Great Castle. This center has a great castle, which can house 5000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Roseshire" parent="Centers" unique_id=1241272313 instance=ExtResource("2_6oxiq")]
 position = Vector2(220, 324)
@@ -107,6 +107,7 @@ ruled_by = "Darian Bright"
 gold_production = 100
 food_production = 350
 reputation = Array[String](["Roseshire is known for its gentle rolling hills, well populated by good decent folk.  "])
+function_one = Array[String](["Minor Keep. This center has a minor keep, which can house 500 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Westwood Keep" parent="Centers" unique_id=1686435619 instance=ExtResource("2_6oxiq")]
 position = Vector2(81, 477)
@@ -169,7 +170,7 @@ sworn_to = 3
 steel_production = 300
 gold_production = 350
 reputation = Array[String](["Among the greatest cities of this land is Port Braio. It has exlusive access to the ocean and from here great ships can undergo incredible voyages.  "])
-function_one = Array[String](["The great salt harbor. From here galleons can sail to the foreign Western countries.  "])
+function_one = Array[String](["The great salt harbor. From here galleons can sail to the foreign Western countries.  ", "Great Keep. This center has a great keep, which can house 1000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Bellamar" parent="Centers" unique_id=1013125263 instance=ExtResource("2_6oxiq")]
 position = Vector2(-440, 230)
@@ -202,6 +203,7 @@ ruled_by = "Kardin Nasov"
 steel_production = 100
 gold_production = 200
 food_production = 50
+reputation = Array[String](["The stoney shores and poor ground make for a poor food source. While Veltan is larger than the nearby coastal villages, it is considered the poorest and least significant of the 4 cities of the Narrow. "])
 
 [node name="Morik" parent="Centers" unique_id=1237860487 instance=ExtResource("2_6oxiq")]
 position = Vector2(641, -259)
@@ -210,6 +212,7 @@ defense_bonus = 1.0
 ruled_by = "Selim Kartar"
 steel_production = 300
 gold_production = 150
+reputation = Array[String](["The various mines in the surrounding lands create a great surplus of minerals, but the city is always looking for decent food. "])
 
 [node name="Drakar Keep" parent="Centers" unique_id=1610849969 instance=ExtResource("2_6oxiq")]
 position = Vector2(81, -300)
@@ -219,6 +222,8 @@ ruled_by = "Bastien Rasdin"
 steel_production = 50
 gold_production = 50
 food_production = 100
+reputation = Array[String](["The northeastern coast is sparsly populated, but there is one keep built on a large hill overlooking the lake. The surrounding lands are poor and prone to cave ins, but the Drakar keep is not easily taken. "])
+function_one = Array[String](["Great Keep. This center has a great keep, which can house 1000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Volsk" parent="Centers" unique_id=299753133 instance=ExtResource("2_6oxiq")]
 position = Vector2(-144, -508)
@@ -227,6 +232,7 @@ defense_bonus = 1.0
 ruled_by = "Cadir Naskin"
 gold_production = 50
 food_production = 150
+reputation = Array[String](["The many wild pagan tribes are always fighting amongst each other, except for in this one sacred village. Not much is known about it. "])
 
 [node name="Nature" type="Node2D" parent="." unique_id=1749660160]
 visible = false
@@ -312,7 +318,7 @@ reputation = Array[String](["Used to work as a spy for the late king Alexander T
 misc_list = Array[String](["Does not like Leo Bellewyn"])
 
 [node name="Leo Bellewyn" parent="Characters" unique_id=2021414051 instance=ExtResource("5_uu6iq")]
-position = Vector2(-66, 290)
+position = Vector2(-72, 280)
 token_name = "Leo Bellewyn"
 age = 21
 army_size = 5000
@@ -328,7 +334,6 @@ visible_to_none = false
 position = Vector2(144, 99)
 token_name = "Sarah the Little"
 age = 19
-sworn_to = 1
 traits = Array[String](["Cunning", "Rude", "Diplomatic", "Deceptive", "Wrathful"])
 misc_list = Array[String](["The bastard daughter of the late king Alexander Taurus, born in a whore house in Silverhaven. Sarah bears a clear resemblance to her noble side. She has worked her way up into a position of power and has informants all around the coast of the Deep. Her ultimate goal is the end of House Taurus. "])
 
@@ -359,7 +364,7 @@ visible_to_none = false
 [node name="ArmyCrest" parent="Characters/Andreas Taurus" unique_id=1622779082 instance=ExtResource("6_286v8")]
 
 [node name="Callum Weave" parent="Characters" unique_id=974138954 instance=ExtResource("5_uu6iq")]
-position = Vector2(225, 96)
+position = Vector2(216, 95)
 token_name = "Callum Weave"
 age = 41
 sworn_to = 5
@@ -391,7 +396,7 @@ reputation = Array[String](["Stefan studied ships and nautical engineering at th
 mechanic_one = Array[String](["Genius shipwright. Fleets don’t cost extra to build compared to regular armies. "])
 
 [node name="Lucas Vistaro" parent="Characters" unique_id=1741839888 instance=ExtResource("5_uu6iq")]
-position = Vector2(-613, 349)
+position = Vector2(-626, 349)
 token_name = "Lucas Vistaro"
 age = 19
 army_size = 40000

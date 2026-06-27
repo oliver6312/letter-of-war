@@ -181,7 +181,7 @@ func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> vo
 				open_info_menu()
 			if get_sworn_name() == "Taurus" and taurus_password_entered:
 				open_info_menu()
-		else:
+			else:
 				open_reputation_menu()
 
 func open_info_menu() -> void:
@@ -199,7 +199,6 @@ func get_info_text() -> String:
 	text += "Sworn to: " + get_sworn_name() + "\n"
 	text += "Ruled by: " + str(ruled_by) + "\n"
 	text += "Defense Bonus: " + str(defense_bonus) + "\n"
-	text += "Garrison Soldiers: " + str(garrison) + "\n"
 
 	text += "\n"
 

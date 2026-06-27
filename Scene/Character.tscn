@@ -22,12 +22,12 @@ taurus_texture = ExtResource("6_ixtvg")
 unsworn_texture = ExtResource("2_us202")
 
 [node name="CharacterCircle" type="Sprite2D" parent="." unique_id=1438268628]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_m6ju2")
 
 [node name="SwornIcon" type="Sprite2D" parent="." unique_id=2019274936]
 unique_name_in_owner = true
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_us202")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1399056822]
