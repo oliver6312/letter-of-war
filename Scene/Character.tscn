@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bj4mflyvdbl0p" path="res://Sprites/Coat of Arms/Taurus.png" id="6_ixtvg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j3y5w"]
-radius = 16.0
 
 [node name="Character" type="Area2D" unique_id=1765023598]
 script = ExtResource("1_q5f08")
