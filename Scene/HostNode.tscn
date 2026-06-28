@@ -49,7 +49,7 @@ position = Vector2(616, 372)
 token_name = "Fimello"
 defense_bonus = 2.0
 sworn_to = 2
-ruled_by = "(Gustav)"
+ruled_by = "Rowan Bellari (Gustav)"
 steel_production = 350
 gold_production = 250
 food_production = 50
@@ -170,9 +170,9 @@ position = Vector2(-648, 322)
 token_name = "Port Braio"
 defense_bonus = 2.0
 sworn_to = 3
-ruled_by = "(Max)"
-steel_production = 300
+ruled_by = "Dylan Carvano (Max)"
 gold_production = 350
+food_production = 300
 reputation = Array[String](["Among the greatest cities of this land is Port Braio. It has exlusive access to the ocean and from here great ships can undergo incredible voyages.  "])
 function_one = Array[String](["The great salt harbor. From here galleons can sail to the foreign Western countries.  ", "Great Keep. This center has a great keep, which can house 1000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
@@ -518,3 +518,10 @@ age = 37
 sworn_to = 4
 traits = Array[String](["Cold", "Diplomatic", "Overweight", "Drunkard", "Cunning"])
 reputation = Array[String](["First born son of Malek Belgar shares his father brutally pragmatic view and sinful habits. Despite being a cold person, he seems to understand others well and has a keen mind for politics.  "])
+
+[node name="Character" parent="Characters" unique_id=519762726 instance=ExtResource("5_uu6iq")]
+position = Vector2(-76, 3)
+token_name = "Erwin Ashton"
+age = 36
+sworn_to = 1
+traits = Array[String](["Learned", "Patient", "Kind", "Alchemist", "Apolitical"])
