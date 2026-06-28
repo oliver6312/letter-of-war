@@ -18,6 +18,16 @@ min_zoom = 0.85
 [node name="Map" type="Sprite2D" parent="." unique_id=149112539]
 texture = ExtResource("1_qb2yl")
 
+[node name="Label" type="Label" parent="." unique_id=1291247684]
+offset_left = 781.0
+offset_top = 588.0
+offset_right = 838.0
+offset_bottom = 611.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 24
+text = "Week 2"
+
 [node name="PasswordChecker" parent="." unique_id=1246411494 instance=ExtResource("4_286v8")]
 
 [node name="Centers" type="Node2D" parent="." unique_id=1438827638]
@@ -120,6 +130,7 @@ ruled_by = "Fredrick Lorwell"
 gold_production = 50
 food_production = 100
 reputation = Array[String](["Westwood is the keep for that bridges the Kingswood and Lydea. Here lives the protectors of the forests. "])
+function_one = Array[String](["Great Keep. This center has a great keep, which can house 1000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Estermont" parent="Centers" unique_id=355190369 instance=ExtResource("2_6oxiq")]
 position = Vector2(413, 285)
@@ -159,7 +170,7 @@ position = Vector2(201, -189)
 token_name = "Nistral"
 defense_bonus = 2.0
 sworn_to = 4
-ruled_by = "(Wilfred)"
+ruled_by = "Cedric Dravin (Wilfred)"
 steel_production = 50
 gold_production = 150
 food_production = 200
@@ -208,15 +219,18 @@ steel_production = 100
 gold_production = 200
 food_production = 50
 reputation = Array[String](["The stoney shores and poor ground make for a poor food source. While Veltan is larger than the nearby coastal villages, it is considered the poorest and least significant of the 4 cities of the Narrow. "])
+function_one = Array[String](["Minor Keep. This center has a minor keep, which can house 500 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
 [node name="Morik" parent="Centers" unique_id=1237860487 instance=ExtResource("2_6oxiq")]
 position = Vector2(641, -259)
 token_name = "Morik"
 defense_bonus = 1.0
+sworn_to = 4
 ruled_by = "Selim Kartar"
 steel_production = 300
 gold_production = 150
 reputation = Array[String](["The various mines in the surrounding lands create a great surplus of minerals, but the city is always looking for decent food. "])
+function_one = Array[String](["Haunted mines. This center has nearby mines which are infested with kobolds. Miners in these caves are often assaulted by kobolds lurking within its depths; they are guarding the rare metals of the earth.  "])
 
 [node name="Drakar Keep" parent="Centers" unique_id=1610849969 instance=ExtResource("2_6oxiq")]
 position = Vector2(81, -300)
@@ -322,17 +336,14 @@ reputation = Array[String](["Used to work as a spy for the late king Alexander T
 misc_list = Array[String](["Does not like Leo Bellewyn"])
 
 [node name="Leo Bellewyn" parent="Characters" unique_id=2021414051 instance=ExtResource("5_uu6iq")]
-position = Vector2(-72, 280)
+position = Vector2(-121, 113)
 token_name = "Leo Bellewyn"
 age = 21
-army_size = 5000
 sworn_to = 1
 traits = Array[String](["Rude", "Brave", "Handsome", "Strong", "Over confident"])
 reputation = Array[String](["This young knight has won countless tournaments and was an important commander in the civil war. Handsome and strong, with an impressive mind of combat, he thinks himself invincible. "])
 mechanic_one = Array[String](["Rabbit. The army can avoid fighting larger armies if the commander chooses to. ", "Bull. The army gets a 20-60% bonus when fighting in open fields "])
 visible_to_none = false
-
-[node name="ArmyCrest" parent="Characters/Leo Bellewyn" unique_id=1889454554 instance=ExtResource("6_286v8")]
 
 [node name="Sarah the Little" parent="Characters" unique_id=1122431964 instance=ExtResource("5_uu6iq")]
 position = Vector2(144, 99)
@@ -342,23 +353,20 @@ traits = Array[String](["Cunning", "Rude", "Diplomatic", "Deceptive", "Wrathful"
 misc_list = Array[String](["The bastard daughter of the late king Alexander Taurus, born in a whore house in Silverhaven. Sarah bears a clear resemblance to her noble side. She has worked her way up into a position of power and has informants all around the coast of the Deep. Her ultimate goal is the end of House Taurus. "])
 
 [node name="Darian Bright" parent="Characters" unique_id=357122988 instance=ExtResource("5_uu6iq")]
-position = Vector2(219, 349)
+position = Vector2(203, 221)
 token_name = "Darian Bright"
 age = 35
-army_size = 10000
 sworn_to = 5
 traits = Array[String](["Naive", "Brave", "Humble", "Strong", "Beloved"])
 reputation = Array[String](["Darian Bright is a middle-aged knight who is famous for protecting the commoners of both ally and enemies during the civil war. "])
 mechanic_one = Array[String](["Wolf. The army grows 25% faster in soldier count at the same cost "])
 visible_to_none = false
 
-[node name="ArmyCrest" parent="Characters/Darian Bright" unique_id=557660049 instance=ExtResource("6_286v8")]
-
 [node name="Andreas Taurus" parent="Characters" unique_id=1701094334 instance=ExtResource("5_uu6iq")]
-position = Vector2(179, 131)
+position = Vector2(181, 221)
 token_name = "Andreas Taurus"
 age = 53
-army_size = 15000
+army_size = 24000
 sworn_to = 5
 traits = Array[String](["Loyal", "Stoic", "Zealous", "Battle Scared", "Wrathful"])
 reputation = Array[String](["A stern war commander, brother to the late king and uncle to Apollo Taurus. He seeks to reunite the kingdom under his House name. "])
@@ -414,7 +422,7 @@ position = Vector2(-647, 349)
 position = Vector2(-647, 349)
 token_name = "Salvardor Ashaux"
 age = 62
-army_size = 20000
+army_size = 21000
 sworn_to = 3
 traits = Array[String](["Old", "Battle Scared", "Brave", "Respected", "Vigilant"])
 reputation = Array[String](["He is a proud self-made man. Coming from foreign lands, trying his fortune in Port Braio, he has proven his worth at sea countless times. His house is still small, only ruling a few fishing villages near Port Braio. He has come a long way from the young lowborn sailor he once was. "])
@@ -437,7 +445,7 @@ traits = Array[String](["Deceptive", "Learned", "Romantic", "Diplomatic", "Depre
 reputation = Array[String](["Ruling never seemed to interest him much, but he has done well overseeing the rich lands of his house. However, Marcelo Marcrest is most well-known for his many short stories, poems and paintings, which have been analyzed and discussed by many scholars.  "])
 
 [node name="Edric Aubchest" parent="Characters" unique_id=98375527 instance=ExtResource("5_uu6iq")]
-position = Vector2(-52, 321)
+position = Vector2(-22, 318)
 token_name = "Edric Aubchest"
 age = 41
 sworn_to = 1
@@ -471,12 +479,13 @@ traits = Array[String](["Diplomatic", "Cowardly", "Dim", "Emotional", "Productiv
 reputation = Array[String](["This man is dutiful and hardworking but notably tried to avoid fighting in the civil war as much as possible. "])
 
 [node name="Sabrina Casamar" parent="Characters" unique_id=1953760770 instance=ExtResource("5_uu6iq")]
-position = Vector2(634, 280)
+position = Vector2(307, 286)
 token_name = "Sabrina Casamar"
 age = 31
 sworn_to = 2
 traits = Array[String](["Cunning", "Anxious", "Kind", "Squeamish", "Diplomatic"])
 reputation = Array[String](["The devoted wife of Ramon Casamar has been known to help him with his work.  "])
+visible_to_taurus = true
 
 [node name="Ramon Casamar" parent="Characters" unique_id=2047124641 instance=ExtResource("5_uu6iq")]
 position = Vector2(815, 230)
@@ -512,16 +521,66 @@ traits = Array[String](["Disloyal", "Pragmatic", "Lustful", "Cruel", "Apathetic"
 reputation = Array[String](["A fat man who rules the northern most city. He rules it with an iron fist; shipments and taxes are on time, or there will be brutal punishment. The laws in place to protect common folk cannot reach this far north. "])
 
 [node name="Roderic Belgar" parent="Characters" unique_id=1712431921 instance=ExtResource("5_uu6iq")]
-position = Vector2(237, -202)
+position = Vector2(363, -241)
 token_name = "Roderic Belgar"
 age = 37
 sworn_to = 4
 traits = Array[String](["Cold", "Diplomatic", "Overweight", "Drunkard", "Cunning"])
 reputation = Array[String](["First born son of Malek Belgar shares his father brutally pragmatic view and sinful habits. Despite being a cold person, he seems to understand others well and has a keen mind for politics.  "])
 
-[node name="Character" parent="Characters" unique_id=519762726 instance=ExtResource("5_uu6iq")]
-position = Vector2(-76, 3)
+[node name="Erwin Ashton" parent="Characters" unique_id=519762726 instance=ExtResource("5_uu6iq")]
+position = Vector2(57, 13)
 token_name = "Erwin Ashton"
 age = 36
 sworn_to = 1
 traits = Array[String](["Learned", "Patient", "Kind", "Alchemist", "Apolitical"])
+
+[node name="Alfred Aubchest" parent="Characters" unique_id=1999867807 instance=ExtResource("5_uu6iq")]
+position = Vector2(-102, 123)
+token_name = "Alfred Aubchest"
+age = 23
+sworn_to = 1
+traits = Array[String](["Strong", "Zealous", "Idealistic", "Friendly", "Squeamish"])
+reputation = Array[String](["Distantly related to the main branch of House Aubchest"])
+
+[node name="Aldar Bellewyn" parent="Characters" unique_id=614979318 instance=ExtResource("5_uu6iq")]
+position = Vector2(-42, 319)
+token_name = "Aldar Bellewyn"
+age = 17
+army_size = 5000
+sworn_to = 1
+traits = Array[String](["Naive", "Romantic", "Insecure", "Handsome", "Loyal"])
+reputation = Array[String](["The overlooked younger brother of Leo Bellewyn, similarly tall and handsome but lacking the natural talents of a fighter. He has a very high opinion of his brother."])
+
+[node name="ArmyCrest4" parent="Characters" unique_id=1889454554 instance=ExtResource("6_286v8")]
+position = Vector2(-42, 319)
+
+[node name="Deorwine (Silverhaven Warden)" parent="Characters" unique_id=2051397691 instance=ExtResource("5_uu6iq")]
+position = Vector2(-102, -1)
+token_name = "Deorwine (Silverhaven Warden)"
+age = 51
+army_size = 1000
+sworn_to = 1
+
+[node name="ArmyCrest3" parent="Characters" unique_id=607041426 instance=ExtResource("6_286v8")]
+position = Vector2(-102, -1)
+
+[node name="Sergant Marius" parent="Characters" unique_id=682780829 instance=ExtResource("5_uu6iq")]
+position = Vector2(152, 69)
+token_name = "Sergant Marius"
+age = 32
+army_size = 500
+sworn_to = 5
+
+[node name="FleetCrest" parent="Characters" unique_id=1994208404 instance=ExtResource("7_8c8lo")]
+position = Vector2(152, 69)
+
+[node name="ArmyCrest5" parent="Characters" unique_id=638289120 instance=ExtResource("6_286v8")]
+position = Vector2(201, 126)
+
+[node name="Thomas the Watcher" parent="Characters" unique_id=562790087 instance=ExtResource("5_uu6iq")]
+position = Vector2(201, 126)
+token_name = "Thomas the Watcher"
+age = 28
+army_size = 500
+sworn_to = 5
