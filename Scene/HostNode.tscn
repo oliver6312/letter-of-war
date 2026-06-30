@@ -26,7 +26,7 @@ offset_bottom = 611.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 24
-text = "Week 2"
+text = "Week 3"
 
 [node name="PasswordChecker" parent="." unique_id=1246411494 instance=ExtResource("4_286v8")]
 
@@ -62,9 +62,8 @@ sworn_to = 2
 ruled_by = "Rowan Bellari (Gustav)"
 steel_production = 350
 gold_production = 250
-food_production = 50
 reputation = Array[String](["Fimello is the most famous city west of Crownport, it gets regular supplies of valuable metals from the grey peaks and is home to the world famous Torvano Palace. The palace is built next to the merging rivers and open to the public; it houses the greatest library ever seen. Scholars from all across the world come seeking wisdom. "])
-function_one = Array[String](["Torvano Palace. An inspiring collection of books, maps and scholars.", "Minor Castle. This center has a minor castle, which can house 2500 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
+function_one = Array[String](["Torvano Palace. An inspiring collection of books, maps and scholars.", "Minor Castle. This center has a minor castle, which can house 2500 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. ", "Well funded poor houses with plenty of food"])
 
 [node name="Silverhaven" parent="Centers" unique_id=526265324 instance=ExtResource("2_6oxiq")]
 position = Vector2(-88, -18)
@@ -252,6 +251,13 @@ gold_production = 50
 food_production = 150
 reputation = Array[String](["The many wild pagan tribes are always fighting amongst each other, except for in this one sacred village. Not much is known about it. "])
 
+[node name="Center" parent="Centers" unique_id=1031853328 instance=ExtResource("2_6oxiq")]
+position = Vector2(773, 363)
+token_name = "Torvins Camp"
+defense_bonus = 1.0
+sworn_to = 2
+visible_to_none = true
+
 [node name="Nature" type="Node2D" parent="." unique_id=1749660160]
 visible = false
 
@@ -336,7 +342,7 @@ reputation = Array[String](["Used to work as a spy for the late king Alexander T
 misc_list = Array[String](["Does not like Leo Bellewyn"])
 
 [node name="Leo Bellewyn" parent="Characters" unique_id=2021414051 instance=ExtResource("5_uu6iq")]
-position = Vector2(-121, 113)
+position = Vector2(-80, -4)
 token_name = "Leo Bellewyn"
 age = 21
 sworn_to = 1
@@ -366,7 +372,7 @@ visible_to_none = false
 position = Vector2(181, 221)
 token_name = "Andreas Taurus"
 age = 53
-army_size = 24000
+army_size = 29000
 sworn_to = 5
 traits = Array[String](["Loyal", "Stoic", "Zealous", "Battle Scared", "Wrathful"])
 reputation = Array[String](["A stern war commander, brother to the late king and uncle to Apollo Taurus. He seeks to reunite the kingdom under his House name. "])
@@ -385,10 +391,9 @@ reputation = Array[String](["Callum Weave grew up as the son of a talented artis
 misc_list = Array[String](["House Taurus is in great depth to House Weave and the traders guild"])
 
 [node name="Torr the Rabid" parent="Characters" unique_id=2115889601 instance=ExtResource("5_uu6iq")]
-position = Vector2(473, -51)
+position = Vector2(325, -115)
 token_name = "Torr the Rabid"
 age = 25
-army_size = 14000
 sworn_to = 4
 traits = Array[String](["Brutal", "Feared", "Loyal", "Battle Scared", "Insane"])
 reputation = Array[String](["Torr the Rabid got his epithet from his many exploits in the civil war. He brutalized the entire coast of the Narrow. It is said that half of the coming generation on the coast are his, and he hangs his flayed victims from the masts of his ship.  "])
@@ -396,16 +401,21 @@ mechanic_one = Array[String](["Slave keeper. Can collect slaves after an attack;
 misc_list = Array[String]([""])
 visible_to_none = false
 
-[node name="FleetCrest" parent="Characters/Torr the Rabid" unique_id=1942921524 instance=ExtResource("7_8c8lo")]
+[node name="FleetCrest3" parent="Characters" unique_id=1942921524 instance=ExtResource("7_8c8lo")]
+position = Vector2(428, -24.000004)
 
 [node name="Stefan the Shipwright" parent="Characters" unique_id=1981726774 instance=ExtResource("5_uu6iq")]
 position = Vector2(221, -168)
 token_name = "Stefan the Shipwright"
 age = 31
+army_size = 4000
 sworn_to = 4
 traits = Array[String](["Loyal", "Squeamish", "Jovial", "Learned", "Productive"])
 reputation = Array[String](["Stefan studied ships and nautical engineering at the great library in Torvano Palace in Fimello. Afterwards he helped build an impressive fleet for House Dravin for the civil war. "])
 mechanic_one = Array[String](["Genius shipwright. Fleets don’t cost extra to build compared to regular armies. "])
+
+[node name="FleetCrest2" parent="Characters" unique_id=178131100 instance=ExtResource("7_8c8lo")]
+position = Vector2(221, -168)
 
 [node name="Lucas Vistaro" parent="Characters" unique_id=1741839888 instance=ExtResource("5_uu6iq")]
 position = Vector2(-626, 349)
@@ -454,7 +464,7 @@ reputation = Array[String](["A quiet man, he is serious and organized. He keeps 
 mechanic_one = Array[String](["Viper. The army gets a 20-60% bonus when defending  "])
 
 [node name="Lev Corvain" parent="Characters" unique_id=1280287712 instance=ExtResource("5_uu6iq")]
-position = Vector2(-266, 184)
+position = Vector2(-144, 63)
 token_name = "Lev Corvain"
 age = 26
 sworn_to = 1
@@ -479,7 +489,7 @@ traits = Array[String](["Diplomatic", "Cowardly", "Dim", "Emotional", "Productiv
 reputation = Array[String](["This man is dutiful and hardworking but notably tried to avoid fighting in the civil war as much as possible. "])
 
 [node name="Sabrina Casamar" parent="Characters" unique_id=1953760770 instance=ExtResource("5_uu6iq")]
-position = Vector2(307, 286)
+position = Vector2(190, 78)
 token_name = "Sabrina Casamar"
 age = 31
 sworn_to = 2
@@ -508,6 +518,7 @@ mechanic_one = Array[String](["Viper. The army gets a 20-60% bonus when defendin
 position = Vector2(428, -24)
 token_name = "Bjorn Savic"
 age = 34
+army_size = 16000
 sworn_to = 4
 traits = Array[String](["Over confident", "Rude", "Illiterate", "Strong", "Ugly"])
 reputation = Array[String](["A strong proud man, after suffering an injury to the head during the civil war he has become unpredictable. He wishes to see revenge on the southern lords who think they are superior to Nillia. "])
@@ -521,7 +532,7 @@ traits = Array[String](["Disloyal", "Pragmatic", "Lustful", "Cruel", "Apathetic"
 reputation = Array[String](["A fat man who rules the northern most city. He rules it with an iron fist; shipments and taxes are on time, or there will be brutal punishment. The laws in place to protect common folk cannot reach this far north. "])
 
 [node name="Roderic Belgar" parent="Characters" unique_id=1712431921 instance=ExtResource("5_uu6iq")]
-position = Vector2(363, -241)
+position = Vector2(524, -219)
 token_name = "Roderic Belgar"
 age = 37
 sworn_to = 4
@@ -529,14 +540,16 @@ traits = Array[String](["Cold", "Diplomatic", "Overweight", "Drunkard", "Cunning
 reputation = Array[String](["First born son of Malek Belgar shares his father brutally pragmatic view and sinful habits. Despite being a cold person, he seems to understand others well and has a keen mind for politics.  "])
 
 [node name="Erwin Ashton" parent="Characters" unique_id=519762726 instance=ExtResource("5_uu6iq")]
-position = Vector2(57, 13)
+position = Vector2(163, 120)
 token_name = "Erwin Ashton"
 age = 36
 sworn_to = 1
 traits = Array[String](["Learned", "Patient", "Kind", "Alchemist", "Apolitical"])
+reputation = Array[String](["A quite man who has studied alchemy, he is uncle to Maxwell Ashton. "])
+visible_to_taurus = true
 
 [node name="Alfred Aubchest" parent="Characters" unique_id=1999867807 instance=ExtResource("5_uu6iq")]
-position = Vector2(-102, 123)
+position = Vector2(-61, -3)
 token_name = "Alfred Aubchest"
 age = 23
 sworn_to = 1
@@ -547,7 +560,7 @@ reputation = Array[String](["Distantly related to the main branch of House Aubch
 position = Vector2(-42, 319)
 token_name = "Aldar Bellewyn"
 age = 17
-army_size = 5000
+army_size = 5750
 sworn_to = 1
 traits = Array[String](["Naive", "Romantic", "Insecure", "Handsome", "Loyal"])
 reputation = Array[String](["The overlooked younger brother of Leo Bellewyn, similarly tall and handsome but lacking the natural talents of a fighter. He has a very high opinion of his brother."])
@@ -559,21 +572,21 @@ position = Vector2(-42, 319)
 position = Vector2(-102, -1)
 token_name = "Deorwine (Silverhaven Warden)"
 age = 51
-army_size = 1000
+army_size = 1750
 sworn_to = 1
 
 [node name="ArmyCrest3" parent="Characters" unique_id=607041426 instance=ExtResource("6_286v8")]
 position = Vector2(-102, -1)
 
 [node name="Sergant Marius" parent="Characters" unique_id=682780829 instance=ExtResource("5_uu6iq")]
-position = Vector2(152, 69)
+position = Vector2(56, 38)
 token_name = "Sergant Marius"
 age = 32
 army_size = 500
 sworn_to = 5
 
 [node name="FleetCrest" parent="Characters" unique_id=1994208404 instance=ExtResource("7_8c8lo")]
-position = Vector2(152, 69)
+position = Vector2(56, 38)
 
 [node name="ArmyCrest5" parent="Characters" unique_id=638289120 instance=ExtResource("6_286v8")]
 position = Vector2(201, 126)
@@ -584,3 +597,24 @@ token_name = "Thomas the Watcher"
 age = 28
 army_size = 500
 sworn_to = 5
+
+[node name="Garsea Marcrest" parent="Characters" unique_id=1576528942 instance=ExtResource("5_uu6iq")]
+position = Vector2(-453, 252)
+token_name = "Garsea Marcrest"
+age = 63
+army_size = 2000
+traits = Array[String](["Jovial", "Drunkard", "", "", ""])
+reputation = Array[String](["An older member of the Marcrest family, he is unlikely to inherit any real power but did lead a smaller army in the civil war which gives him some experience."])
+mechanic_one = Array[String](["Rabbit. The army can avoid fighting larger armies if the commander chooses to. "])
+
+[node name="ArmyCrest6" parent="Characters" unique_id=865805686 instance=ExtResource("6_286v8")]
+position = Vector2(-453, 252)
+
+[node name="Torvin" parent="Characters" unique_id=1838219432 instance=ExtResource("5_uu6iq")]
+position = Vector2(827, 393)
+token_name = "Torvin"
+age = 51
+army_size = 200
+sworn_to = 2
+traits = Array[String](["Brave", "Old", "Hunter", "Cautious", "Stern"])
+misc_list = Array[String](["Oversees a task force of 300 people"])
