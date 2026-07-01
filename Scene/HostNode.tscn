@@ -26,7 +26,7 @@ offset_bottom = 611.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 24
-text = "Week 3"
+text = "Week 4"
 
 [node name="PasswordChecker" parent="." unique_id=1246411494 instance=ExtResource("4_286v8")]
 
@@ -83,7 +83,7 @@ token_name = "Bord Keep"
 defense_bonus = 3.0
 sworn_to = 1
 ruled_by = "Edric Aubchest"
-food_production = 100
+food_production = 50
 reputation = Array[String](["The damp keep is often looked down upon, but it's strategic location makes it vital to defend Corvinshire from Lydea. Armies can directly enter or leave this castle from both Corvinshire and Lydea"])
 function_one = Array[String](["Strategic location. Armies can directly enter or leave this castle from both Corvinshire and Lydea", "Great Keep. This center has a great keep, which can house 1000 soldiers and any important character. If a city is under siege, the ruling lord and his most loyal followers can hide here until help arrives. "])
 
@@ -256,10 +256,10 @@ position = Vector2(773, 363)
 token_name = "Torvins Camp"
 defense_bonus = 1.0
 sworn_to = 2
+visible_to_bellari = true
 visible_to_none = true
 
 [node name="Nature" type="Node2D" parent="." unique_id=1749660160]
-visible = false
 
 [node name="Great Woods" parent="Nature" unique_id=608578922 instance=ExtResource("2_6oxiq")]
 position = Vector2(-517, -200)
@@ -342,7 +342,7 @@ reputation = Array[String](["Used to work as a spy for the late king Alexander T
 misc_list = Array[String](["Does not like Leo Bellewyn"])
 
 [node name="Leo Bellewyn" parent="Characters" unique_id=2021414051 instance=ExtResource("5_uu6iq")]
-position = Vector2(-80, -4)
+position = Vector2(-102, -1)
 token_name = "Leo Bellewyn"
 age = 21
 sworn_to = 1
@@ -352,7 +352,7 @@ mechanic_one = Array[String](["Rabbit. The army can avoid fighting larger armies
 visible_to_none = false
 
 [node name="Sarah the Little" parent="Characters" unique_id=1122431964 instance=ExtResource("5_uu6iq")]
-position = Vector2(144, 99)
+position = Vector2(32, 79)
 token_name = "Sarah the Little"
 age = 19
 traits = Array[String](["Cunning", "Rude", "Diplomatic", "Deceptive", "Wrathful"])
@@ -391,7 +391,7 @@ reputation = Array[String](["Callum Weave grew up as the son of a talented artis
 misc_list = Array[String](["House Taurus is in great depth to House Weave and the traders guild"])
 
 [node name="Torr the Rabid" parent="Characters" unique_id=2115889601 instance=ExtResource("5_uu6iq")]
-position = Vector2(325, -115)
+position = Vector2(224, -196)
 token_name = "Torr the Rabid"
 age = 25
 sworn_to = 4
@@ -464,7 +464,7 @@ reputation = Array[String](["A quiet man, he is serious and organized. He keeps 
 mechanic_one = Array[String](["Viper. The army gets a 20-60% bonus when defending  "])
 
 [node name="Lev Corvain" parent="Characters" unique_id=1280287712 instance=ExtResource("5_uu6iq")]
-position = Vector2(-144, 63)
+position = Vector2(-116, -18)
 token_name = "Lev Corvain"
 age = 26
 sworn_to = 1
@@ -540,7 +540,7 @@ traits = Array[String](["Cold", "Diplomatic", "Overweight", "Drunkard", "Cunning
 reputation = Array[String](["First born son of Malek Belgar shares his father brutally pragmatic view and sinful habits. Despite being a cold person, he seems to understand others well and has a keen mind for politics.  "])
 
 [node name="Erwin Ashton" parent="Characters" unique_id=519762726 instance=ExtResource("5_uu6iq")]
-position = Vector2(163, 120)
+position = Vector2(290, 196)
 token_name = "Erwin Ashton"
 age = 36
 sworn_to = 1
@@ -560,7 +560,7 @@ reputation = Array[String](["Distantly related to the main branch of House Aubch
 position = Vector2(-42, 319)
 token_name = "Aldar Bellewyn"
 age = 17
-army_size = 5750
+army_size = 7500
 sworn_to = 1
 traits = Array[String](["Naive", "Romantic", "Insecure", "Handsome", "Loyal"])
 reputation = Array[String](["The overlooked younger brother of Leo Bellewyn, similarly tall and handsome but lacking the natural talents of a fighter. He has a very high opinion of his brother."])
@@ -569,10 +569,10 @@ reputation = Array[String](["The overlooked younger brother of Leo Bellewyn, sim
 position = Vector2(-42, 319)
 
 [node name="Deorwine (Silverhaven Warden)" parent="Characters" unique_id=2051397691 instance=ExtResource("5_uu6iq")]
-position = Vector2(-102, -1)
+position = Vector2(-81, -1)
 token_name = "Deorwine (Silverhaven Warden)"
 age = 51
-army_size = 1750
+army_size = 6250
 sworn_to = 1
 
 [node name="ArmyCrest3" parent="Characters" unique_id=607041426 instance=ExtResource("6_286v8")]
@@ -618,3 +618,29 @@ army_size = 200
 sworn_to = 2
 traits = Array[String](["Brave", "Old", "Hunter", "Cautious", "Stern"])
 misc_list = Array[String](["Oversees a task force of 300 people"])
+
+[node name="Abalin the Shield" parent="Characters" unique_id=1699037252 instance=ExtResource("5_uu6iq")]
+position = Vector2(-124, 152)
+token_name = "Abalin"
+age = 39
+sworn_to = 5
+traits = Array[String](["Noble", "Honest", "Skillful fighter", "Beloved", "Zealous"])
+reputation = Array[String](["An experienced warrior, who is known for fighting beside Darian Bright himself. With time he has gotten slower and weaker, but his skills are still sharp and his honor strong. "])
+visible_to_ashton = true
+
+[node name="Brunel Monelli" parent="Characters" unique_id=1007482427 instance=ExtResource("5_uu6iq")]
+position = Vector2(-242, 103)
+token_name = "Brunel Monelli"
+age = 23
+sworn_to = 3
+traits = Array[String](["Very strong ", "Very tall", "Wrathful", "Lustful", "Feared"])
+reputation = Array[String](["It is rumored that the Monellis have bear blood in their veins. This particular man only serves to credit the suspicion. His strength and size are wielded by an unpredictable mind, known for great outbursts of anger and brutality. During the civil war he would terrorize peasants, but in peace time he rides down bandits, making gruesome examples out of anyone caught.  "])
+mechanic_one = Array[String]([""])
+visible_to_ashton = true
+
+[node name="Brand the Cannibal" parent="Characters" unique_id=1897944441 instance=ExtResource("5_uu6iq")]
+position = Vector2(65, -38)
+token_name = "Brand"
+age = 31
+sworn_to = 4
+traits = Array[String](["Cruel", "Strong", "Insane", "Battle experience", "Dim"])
