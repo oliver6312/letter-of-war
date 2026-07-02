@@ -404,7 +404,7 @@ misc_list = Array[String]([""])
 visible_to_none = false
 
 [node name="FleetCrest3" parent="Characters" unique_id=1942921524 instance=ExtResource("7_8c8lo")]
-position = Vector2(455, -28)
+position = Vector2(428, -24)
 
 [node name="Stefan the Shipwright" parent="Characters" unique_id=1981726774 instance=ExtResource("5_uu6iq")]
 position = Vector2(221, -168)
@@ -524,7 +524,7 @@ mechanic_one = Array[String](["Viper. The army gets a 20-60% bonus when defendin
 position = Vector2(428, -24)
 token_name = "Bjorn Savic"
 age = 34
-army_size = 16000
+army_size = 6000
 sworn_to = 4
 traits = Array[String](["Over confident", "Rude", "Illiterate", "Strong", "Ugly"])
 reputation = Array[String](["A strong proud man, after suffering an injury to the head during the civil war he has become unpredictable. He wishes to see revenge on the southern lords who think they are superior to Nillia. "])
@@ -661,11 +661,14 @@ age = 42
 army_size = 2000
 sworn_to = 5
 
+[node name="ArmyCrest9" parent="Characters" unique_id=1881683583 instance=ExtResource("6_286v8")]
+position = Vector2(323, -120)
+
 [node name="Ullg Savic" parent="Characters" unique_id=433348769 instance=ExtResource("5_uu6iq")]
-position = Vector2(455, -29)
+position = Vector2(323, -120)
 token_name = "16000"
 age = 17
-army_size = 16000
+army_size = 10000
 sworn_to = 4
 traits = Array[String](["Brave", "Loyal", "Dim", "Strong", "Romantic"])
 mechanic_one = Array[String](["Bull. The army gets a 20-60% bonus when fighting in open fields "])
