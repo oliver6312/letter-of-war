@@ -643,13 +643,15 @@ reputation = Array[String](["It is rumored that the Monellis have bear blood in 
 mechanic_one = Array[String](["Scorpion. This character can focus on killing another character in combat and won’t stop until they succeed or they themselves perish. Typically has a 80% success rate unless special precautions are taken "])
 visible_to_ashton = true
 visible_to_bellari = true
+visible_to_none = false
 
 [node name="Brand the Cannibal" parent="Characters" unique_id=1897944441 instance=ExtResource("5_uu6iq")]
-position = Vector2(65, -38)
+position = Vector2(-94, -49)
 token_name = "Brand"
 age = 31
 sworn_to = 4
 traits = Array[String](["Cruel", "Strong", "Insane", "Battle experience", "Dim"])
+visible_to_none = false
 
 [node name="ArmyCrest8" parent="Characters" unique_id=1828136905 instance=ExtResource("6_286v8")]
 position = Vector2(244, 336)
